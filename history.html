@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>History Of Python</title>
+    <style>
+        *{
+            display:fixed;
+    margin:0;
+    padding:0;
+    
+background-repeat: repeat;
+}
+h1{
+    font-size: 30px;
+    margin:0 10px 0 10px;
+color:blue;
+-webkit-text-stroke:1px red;
+    margin-top:50px;
+
+}
+p{
+    border-radius: 6px;
+    margin:0 10px 0 10px;
+    font-size: 10px;
+    background-color: #c0b9b9;
+}
+button{
+    
+    margin-left:50%;
+    width:85px;
+    height:30px;
+    font-size: 20px;
+    border-radius:8px;
+    background:rgb(238, 21, 21);
+background-repeat:repeat; 
+}
+button:hover{
+animation: pulse 1.5s infinite;
+}
+@keyframes pulse{
+    0%,100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+}
+.button{
+    
+    position:absolute;
+    
+    margin-left:5px;
+    margin-top:35px;
+    width:85px;
+    height:30px;
+    font-size: 20px;
+    border-radius:8px;
+    background:rgb(21, 238, 72);
+background-repeat:repeat; 
+}
+button:hover{
+animation: pulse 1.5s infinite;
+}
+@keyframes pulse{
+    0%,100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+
+}
+body{
+        /* background:linear-gradient(to right,#00c6ff,#0072ff) ;
+     */
+     background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20211031/pngtree-abstract-bg-image_914283.png");
+     background-repeat:no-repeat ;
+    background-size:cover ;}
+.history{
+    
+    margin-right:10px;
+    font-size: 30px;
+    text-align: end;
+    color:rgba(4, 255, 0, 0.679);
+    -webkit-text-stroke: 1px black;;
+animation: chenge  2s linear infinite;
+}
+@keyframes chenge{
+    0%,100%{
+        color:aqua;
+    }
+    50%{
+        color:blue
+    }
+}
+ .div{
+    background:linear-gradient(to right,green,rgb(11, 246, 11));
+}
+.div1{
+    width:100%;
+    height:50px;
+}
+.back{
+    margin-left:10px;
+    background:#78fe11;
+}
+hr{
+    color:black;
+}
+.next{
+    position: fixed;
+    margin:0 10px 20px 50%;
+
+background:#78fe11;}
+.completed{ 
+    position: fixed;
+    background: #78fe11;
+    width:100px;
+    margin: 0 10px 200px 50px;
+    
+}
+.logo{
+    position:absolute;
+    width:50px;
+    height:50px;
+ 
+    filter:drop-shadow(20px 20px 20px transparent);
+border-radius: 20px;
+}
+
+    </style>
+</head>
+
+<body id="completed">
+    <div class="div">
+        <img  class="logo"src="https://i.ibb.co/MxDGkmcG/e576c9ca-a6fa-478d-bae4-8ef964a79c9a.webp">
+ <br><a href="C:\Users\darsh_v1m5wdi\OneDrive\Desktop\opara\c2.html" target="_blank">
+    <button class="button">Home</button></a>
+    <h2 class="history"> WELCOME TO HISTORY </h2>
+   </div> <hr/>
+    <nav>
+
+        <h1>History Of Python</h1>
+        <p id="history">
+            The history of python  the Developer is Guido Van Rossum year 1991.<br>
+            The python name comes in this way in 1970s the one comedy show name called BBC . <br>the developer 
+            Guido van Rossum is a watching that comedy show daily.  <br>About show that is a one of the flying circus comedy show name called “ monty python” the developer is a big fan of that show.
+             Developing the python program he wants to put a name  of that particular program . <br>he planed and select the best name as a PYTHON .
+            
+            </p><br>
+            <button type="button" onclick='document.getElementById("history").innerHTML="The inspiration for the name came from the BBC’s TV Show – ‘ Monty Python’s Flying Circus’ , as he was a big fan of the TV show and also he wanted a short, unique and slightly mysterious name for his invention and hence he named it Python! He was the “Benevolent dictator for life” (BDFL) until he stepped down from the position as the leader on 12th July 2018. For quite some time he used to work for Google, but currently, he is working at Dropbox"' id="loder">More</button>
+            <br><br><h1> Version Of Python Released</h1>
+<p>The First version was released in the year of 1994. The version name called 1.0 the first version of python .<br>
+    The Second version was released in the year  of 2000. The version name called 2.0 the second version of python.<br>
+    The Third version was released in the year of 2008. The version name called 3.0 and present the third version of python.<br>
+    
+</p><div class="div1">
+<a href="C:\Users\darsh_v1m5wdi\OneDrive\Desktop\python web\introduction.html">
+<button class="back">◀️BACK</button></a>
+<a href="C:\Users\darsh_v1m5wdi\OneDrive\Desktop\python web\features.html">
+    <button class="next">NEXT▶️</button>
+     <a href="C:\Users\darsh_v1m5wdi\OneDrive\Desktop\python web\history.html"  target="_top"> <button class="completed" onclick="document.getElementById('completed').innerHTML=alert('Congragulation')">Completed</button></a>
+</nav>
+</div>
+</body>
+</html>
