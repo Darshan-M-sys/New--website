@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+              background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20211031/pngtree-abstract-bg-image_914283.png");
+            background-repeat:no-repeat repeat;
+            background-size: cover;
+        }
+        
+.button{
+    
+    position:absolute;
+    
+    margin-left:5px;
+    margin-top:75px;
+    width:85px;
+    height:30px;
+    font-size: 20px;
+    border-radius:8px;
+    background:#e0e2e1;
+background-repeat:repeat; 
+}
+button:hover{
+animation: pulse 1.5s infinite;
+}
+@keyframes pulse{
+    0%,100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+
+}
+        p{
+            color:white;
+            margin-left:10px ;
+            margin-right: 10px;
+            background: black;
+            border-radius: 20px;
+        }
+        h1{
+            color:rgb(42, 126, 165);
+            -webkit-text-stroke: 0.6px rgb(11, 238, 136);
+            margin-left:10px ;
+            margin-right: 10px; 
+        }
+        .top{
+            width:100%;
+            height:100px; 
+            background-image:url("https://i.imgur.com/Xmvuv4L.jpeg") ;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 20px;
+        } 
+        .features{
+    
+    margin-right:10px;
+    font-size: 30px;
+    text-align: end;
+    color:rgba(4, 255, 0, 0.679);
+    -webkit-text-stroke: 1px black;;
+animation: chenge  2s linear infinite;
+}
+@keyframes chenge{
+    0%,100%{
+        color:rgb(194, 123, 188);
+    }
+    50%{
+        color:rgb(238, 235, 227)
+    }
+}
+        .text1{
+            width:300px;
+            height:100px;
+            border: 2px black  dashed;
+            align-items: center;
+            text-align: center;
+            margin-left: 50px;
+            background-color: rgb(224, 19, 169);
+            border-radius: 20px;
+        }
+        .textb{ 
+            background-color: rgb(0, 255, 238);
+            width: 100px;
+            height: 30px;
+            border-radius: 5px;
+
+        }
+        .output{
+            background-color: aqua;
+            margin-left: 200px;
+            width:60px;
+            height: 30px;
+            border-radius: 6px;
+        }
+        .logo{
+    position:absolute;
+    width:50px;
+    height:50px;
+    margin-left:10px;
+    margin-top: 10px;
+ 
+    filter:drop-shadow(20px 20px 20px transparent);
+border-radius: 20px;
+}
+       
+.back{
+    margin-left:10px;
+    height:30px;
+
+    background:hsl(65, 99%, 53%);
+    border-radius: 6px;
+}
+hr{
+    color:black;
+}
+.next{
+    border-radius: 5px;
+    margin:0 10px 20px 50%;
+height:30px;
+background:hsl(68, 99%, 53%);
+}
+.completed{ 
+    height:30px;
+    background:rgb(0, 251, 255);
+    width:110px;
+    margin: 0 100px 20px 110px;
+    border-radius: 6px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="top">
+        <a href="https://www.instagram.com/coder.142?igsh=MWY4cXljY3hqcWU5Yw=="> <img  class="logo"src=" https://i.imgur.com/ibTresR.jpeg"></a>
+        <button class="button">HOME</button>
+        <h2 class="features">Welcome To <br>Keywords</h2>
+
+    </div><hr>
+    <h1>
+        Meaning
+    </h1>
+    <p> The python keyword are reserved words each keyword having the special meaning. <br> That meaning cannot be changed . and the identifier cannot be keywords.<br> 
+    purpose of keyword we can create a large program the keywords helps to divide the code and make the code as meaning full.</p>
+    <br>
+    <p> The python keywords you want to check click below button</p>
+    <div class="text1">
+    <h2 class="text" id="textToCopy">import keyword<br>
+                            print(keyword.kwlist)</h2>
+    <button class="textb" onclick="copyText()">Copy Text</button>
+    
+    </div>
+    <br> <br>
+     <p id="output"></p>
+    <button  class="output" onclick='document.getElementById("output").innerHTML="False, None, True, and, as, assert, sync, await, break, class, continue, def, del, elif, else, except, finally, for, froma, global, if, import, in, is, lambda, nonlocal, not, or, pass, raise, return, try, while, with, yield"'> Output</button>
+<br>
+<br>
+    <script>
+        function copyText() {
+          
+            let tempInput = document.createElement("input");
+            tempInput.value = document.getElementById("textToCopy").innerText;
+            document.body.appendChild(tempInput);
+
+            tempInput.select();
+            document.execCommand("copy");
+
+  
+            document.body.removeChild(tempInput);
+
+            alert("Text copied!");
+        }
+    </script>
+    <br>
+       <a href="https://darshan-m-sys.github.io/New--website/identifiers.html"><button class="back">◀️BACK</button></a>
+       <a href="https://darshan-m-sys.github.io/New--website/literals.html"><button class="next">NEXT▶️</button></a>
+       <a href=""> <button class="completed" onclick='document.getElementById("completed").innerHTML=alert("Darshan page says 🤗Congragulation🤗 learn well all the best")'>Completed</button></a>
+    
+
+</body>
+</html>
