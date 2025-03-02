@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+     background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20211031/pngtree-abstract-bg-image_914283.png");
+     background-repeat: repeat;
+     background-size: cover;
+ }
+ 
+.button{
+
+position:absolute;
+
+margin-left:5px;
+margin-top:75px;
+width:85px;
+height:30px;
+font-size: 20px;
+border-radius:8px;
+background:#e0e2e1;
+background-repeat:repeat; 
+}
+button:hover{
+animation: pulse 1.5s infinite;
+}
+@keyframes pulse{
+0%,100%{
+ transform: scale(1);
+}
+50%{
+ transform: scale(1.1);
+}
+
+}
+ol{
+    color:rgb(243, 13, 247)
+}
+ p{
+     color:white;
+     margin-left:10px ;
+     margin-right: 10px;
+     background: black;
+     border-radius: 20px;
+ }
+ h1{
+     color:rgb(42, 126, 165);
+     -webkit-text-stroke: 0.6px rgb(11, 238, 136);
+     margin-left:10px ;
+     margin-right: 10px; 
+ }
+ .top{
+     width:100%;
+     height:100px; 
+     background-image:url("https://i.imgur.com/Xmvuv4L.jpeg") ;
+     background-repeat: no-repeat;
+     background-size: cover;
+     border-radius: 20px;
+ }
+ 
+.back{
+margin-left:10px;
+height:30px;
+
+background:hsl(65, 99%, 53%);
+border-radius: 6px;
+}
+hr{
+color:black;
+}
+.next{
+border-radius: 5px;
+margin:0 10px 20px 50%;
+height:30px;
+background:hsl(68, 99%, 53%);
+}
+.completed{ 
+height:30px;
+background:rgb(0, 251, 255);
+width:110px;
+margin: 0 100px 20px 110px;
+border-radius: 6px;
+}
+.more{
+
+width:50px;
+height:30px;
+border-radius: 6px;
+background: rgb(0, 238, 255);
+margin-left:250px;
+}
+.features{
+
+margin-right:10px;
+font-size: 30px;
+text-align: end;
+color:rgba(4, 255, 0, 0.679);
+-webkit-text-stroke: 1px black;;
+animation: chenge  2s linear infinite;
+}
+@keyframes chenge{
+0%,100%{
+ color:rgb(194, 123, 188);
+}
+50%{
+ color:rgb(238, 235, 227)
+}
+}
+.logo{
+position:absolute;
+width:50px;
+height:50px;
+margin-left:10px;
+margin-top: 10px;
+
+filter:drop-shadow(20px 20px 20px transparent);
+border-radius: 20px;
+}
+
+
+.icon{
+
+
+    
+    background-image: url("https://i.imgur.com/duuvvTR.png");
+    background-repeat: no-repeat;
+    
+}
+</style>
+</head>
+<body>
+    <div class="top">
+        <a href="https://www.instagram.com/coder.142?igsh=MWY4cXljY3hqcWU5Yw=="> <img  class="logo"src=" https://i.imgur.com/ibTresR.jpeg"></a>
+        <button class="button">HOME</button>
+        <h2 class="features">Welcome To <br>Modules</h2>
+
+    <div class="icon">
+
+    <h1> Modules In Python</h1>
+    <p> The Modules in a python is just a saved file as python file . It contain the python code as lot of classes , functions, variables and other. why we are using this this module means it is a just a file of python code . but we can't put 1000 lines of code inside the same file that's why we are dividing the python code and later using that into external file.  the python file extension .py or .pyc  syntax for file Extension filename I mean module name . py extension </p>
+    <p> In for example you can create a module with name module.py after saving this file you create other file like module_Example.py . that module.py file here import that file inside the python code by using the import keyword  that example shown in the below. please follow it</p>
+    <h1> Creating Module</h1>
+    <p> File name module.py</p>
+    <p> def greet(name,age):
+    
+    
+        <br> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;print(f"Hello{name}your {age} Years old!")
+    </p>
+   <h1> Importing The module</h1>
+   <p> file name module_Example.py</p>
+   <p> import module<br>
+print(module.greet("darshan",19))</p>
+<h1> OutPut</h1>
+<p> Hello darshan your 19 years old!</p>
+   </div>
+<a href="https://darshan-m-sys.github.io/New--website/history.html"> <button class="back">◀️BACK</button></a>
+<a href="https://darshan-m-sys.github.io/New--website/install.html"><button class="next">NEXT▶️</button></a>
+<a href=""> <button class="completed" onclick='document.getElementById("completed").innerHTML=alert("Darshan page says 🤗Congragulation🤗 learn well all the best")'>Completed</button></a>
+
+</body>
+</html>

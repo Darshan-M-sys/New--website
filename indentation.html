@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+        body{
+     background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20211031/pngtree-abstract-bg-image_914283.png");
+     background-repeat: repeat;
+     background-size: cover;
+ }
+ 
+.button{
+
+position:absolute;
+
+margin-left:5px;
+margin-top:75px;
+width:85px;
+height:30px;
+font-size: 20px;
+border-radius:8px;
+background:#e0e2e1;
+background-repeat:repeat; 
+}
+button:hover{
+animation: pulse 1.5s infinite;
+}
+@keyframes pulse{
+0%,100%{
+ transform: scale(1);
+}
+50%{
+ transform: scale(1.1);
+}
+
+}
+ol{
+    color:rgb(243, 13, 247)
+}
+ p{
+     color:white;
+     margin-left:10px ;
+     margin-right: 10px;
+     background: black;
+     border-radius: 20px;
+ }
+ h1{
+     color:rgb(42, 126, 165);
+     -webkit-text-stroke: 0.6px rgb(11, 238, 136);
+     margin-left:10px ;
+     margin-right: 10px; 
+ }
+ .top{
+     width:100%;
+     height:100px; 
+     background-image:url("https://i.imgur.com/Xmvuv4L.jpeg") ;
+     background-repeat: no-repeat;
+     background-size: cover;
+     border-radius: 20px;
+ }
+ 
+.back{
+margin-left:10px;
+height:30px;
+
+background:hsl(65, 99%, 53%);
+border-radius: 6px;
+}
+hr{
+color:black;
+}
+.next{
+border-radius: 5px;
+margin:0 10px 20px 50%;
+height:30px;
+background:hsl(68, 99%, 53%);
+}
+.completed{ 
+height:30px;
+background:rgb(0, 251, 255);
+width:110px;
+margin: 0 100px 20px 110px;
+border-radius: 6px;
+}
+.more{
+
+width:50px;
+height:30px;
+border-radius: 6px;
+background: rgb(0, 238, 255);
+margin-left:250px;
+}
+.features{
+
+margin-right:10px;
+font-size: 30px;
+text-align: end;
+color:rgba(4, 255, 0, 0.679);
+-webkit-text-stroke: 1px black;;
+animation: chenge  2s linear infinite;
+}
+@keyframes chenge{
+0%,100%{
+ color:rgb(194, 123, 188);
+}
+50%{
+ color:rgb(238, 235, 227)
+}
+}
+.logo{
+position:absolute;
+width:50px;
+height:50px;
+margin-left:10px;
+margin-top: 10px;
+
+filter:drop-shadow(20px 20px 20px transparent);
+border-radius: 20px;
+}
+
+
+.icon{
+
+
+    
+    background-image: url("https://i.imgur.com/duuvvTR.png");
+    background-repeat: no-repeat;
+    
+}
+</style>
+
+    
+</head>
+<body>
+       
+    <div class="top">
+        <a href="https://www.instagram.com/coder.142?igsh=MWY4cXljY3hqcWU5Yw=="> <img  class="logo"src=" https://i.imgur.com/ibTresR.jpeg"></a>
+        <button class="button">HOME</button>
+        <h2 class="features">Welcome To <br>Indentation</h2>
+
+    </div><hr>
+    <div class="icon">
+    <h1> Indentation In Python</h1>
+    <p> It is a very important part and concept in python we don't know about this we can't do the python code . indent in a python it is a space at the begnning of the line code. the python indentation is make code block that is help full for interpreter to execute the [code without error. in basically other language like c we are using curly braces to divide the code block but here we using indent . it avoid the Syntax error, and make code structure . free execution</p>
+    <h1> Indent In IF Condition</h1> 
+    <p> The indent in if condition we must be know the indent in if condition otherwise the python interpreter gives  indentation error.  EXample in the below</p>
+<h1> Examples</h1>
+<p> x= 10<br>
+    if x>5:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Print("x  is greater then 5")</p>
+<h1> Indent In For Loop</h1>
+<p> Indentation in for loop the print statement must be pleaced below the variable </p>
+<h1>Examples</h1>
+<p> for i in range(1,10):<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Print(i)
+
+</p>
+    <h1> Indent In Function </h1>
+    <p> Indentation in fuction we must know the before writing the code.</p>
+    <h1> Examples</h1>
+    <p> def list():<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("Hello")<br>
+        list()
+        </p>
+        
+    </div>
+    
+<a href="https://darshan-m-sys.github.io/New--website/history.html"> <button class="back">◀️BACK</button></a>
+<a href="https://darshan-m-sys.github.io/New--website/install.html"><button class="next">NEXT▶️</button></a>
+<a href=""> <button class="completed" onclick='document.getElementById("completed").innerHTML=alert("Darshan page says 🤗Congragulation🤗 learn well all the best")'>Completed</button></a>
+
+</body>
+</html>

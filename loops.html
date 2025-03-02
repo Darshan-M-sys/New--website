@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .text{
+            fill:white;
+        }
+        body{
+     background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20211031/pngtree-abstract-bg-image_914283.png");
+     background-repeat: repeat;
+     background-size: cover;
+ }
+ 
+.button{
+
+position:absolute;
+
+margin-left:5px;
+margin-top:75px;
+width:85px;
+height:30px;
+font-size: 20px;
+border-radius:8px;
+background:#e0e2e1;
+background-repeat:repeat; 
+}
+button:hover{
+animation: pulse 1.5s infinite;
+}
+@keyframes boxblurbonda{
+0%,100%{
+ transform: scale(1);
+}
+50%{
+ transform: scale(1.1);
+}
+
+}
+ol{
+    color:rgb(243, 13, 247)
+}
+ p{
+     color:white;
+     margin-left:10px ;
+     margin-right: 10px;
+     background: black;
+     border-radius: 20px;
+ }
+ h1{
+     color:rgb(42, 126, 165);
+     -webkit-text-stroke: 0.6px rgb(11, 238, 136);
+     margin-left:10px ;
+     margin-right: 10px; 
+ }
+ .top{
+     width:100%;
+     height:100px; 
+     background-image:url("https://i.imgur.com/Xmvuv4L.jpeg") ;
+     background-repeat: no-repeat;
+     background-size: cover;
+     border-radius: 20px;
+ }
+ 
+.back{
+margin-left:10px;
+height:30px;
+
+background:hsl(65, 99%, 53%);
+border-radius: 6px;
+}
+hr{
+color:black;
+}
+.next{
+border-radius: 5px;
+margin:0 10px 20px 50%;
+height:30px;
+background:hsl(68, 99%, 53%);
+}
+.completed{ 
+height:30px;
+background:rgb(0, 251, 255);
+width:110px;
+margin: 0 100px 20px 110px;
+border-radius: 6px;
+}
+.more{
+
+width:50px;
+height:30px;
+border-radius: 6px;
+background: rgb(0, 238, 255);
+margin-left:250px;
+}
+.features{
+
+margin-right:10px;
+font-size: 30px;
+text-align: end;
+color:rgba(4, 255, 0, 0.679);
+-webkit-text-stroke: 1px black;;
+animation: chenge  2s linear infinite;
+}
+@keyframes chenge{
+0%,100%{
+ color:rgb(194, 123, 188);
+}
+50%{
+ color:rgb(238, 235, 227)
+}
+}
+.logo{
+position:absolute;
+width:50px;
+height:50px;
+margin-left:10px;
+margin-top: 10px;
+
+filter:drop-shadow(20px 20px 20px transparent);
+border-radius: 20px;
+}
+
+
+.icon{
+
+
+    
+    background-image: url("https://i.imgur.com/duuvvTR.png");
+    background-repeat: no-repeat;
+    
+}
+li{
+    color:purple;
+}
+</style>
+
+ 
+</head>
+<body>
+        
+    <div class="top">
+        <a href="https://www.instagram.com/coder.142?igsh=MWY4cXljY3hqcWU5Yw=="> <img  class="logo"src=" https://i.imgur.com/ibTresR.jpeg"></a>
+        <button class="button">HOME</button>
+        <h2 class="features">Welcome To <br>Loop<br> Statements</h2>
+    </div><hr>
+    <div class="icon">
+    <h1> Loops In Python</h1>
+    <p> The loops in python it allows a you to execute multiple statement or block of code repeatly.   the loop is also known as a iteration . means repeative  structure. when you want to print hello  in 1000 times but we con't write 1000 times print statement that's why we using loops to execute a block of code in multiple times.
+          </p>
+          <p> The python provides mainly two types of loops</p>
+          <ol>
+            <li> For Loop</li>
+            <li> While Loop</li>
+          </ol>
+          <p> Let understand by loops</p>
+          <h1> While Loop</h1>
+          <p> The while loop is a indefinite loop which means the code is execute or iterate  as long as condition is true. and the while loop contain conditions to exit the loop or terminate the loop but for loop exit using range() function.  when we does not assign the condition it will repeate the process does not end . the while loop evaluate the condition first then execute the body of the loop or statements . if condition is false then the loop was exit</p>
+          <h1> Syntax</h1>
+          <p> while condition:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;statement
+            <br> 
+          </p>
+          <h1> FlowChart</h1>
+   <svg width="500" height="500">
+    <line x1="150" y1="30" x2="150" y2="200"  stroke="black" stroke-width="2"></line>
+    <line x1="60" y1="65" x2="60" y2="250"  stroke="black" stroke-width="2"></line>
+    <line x1="280" y1="110" x2="280" y2="300"  stroke="black" stroke-width="2"></line>
+    <line x1="60" y1="65" x2="150" y2="65"  stroke="black" stroke-width="2"></line>
+    <line x1="60" y1="250" x2="190" y2="250"  stroke="black" stroke-width="2"></line>
+    <line x1="175" y1="300" x2="280" y2="300"  stroke="black" stroke-width="2"></line>
+    <rect  x="125" y="290" width="50" height="20" fill="blue" rx="2" ry="2"radius="2"></rect>
+    <line x1="100" y1="110" x2="280" y2="110"  stroke="black" stroke-width="2"></line>
+    <rect  x="125" y="20" width="50" height="20" fill="blue" rx="2" ry="2"radius="2"></rect>
+    <rect  x="110" y="200" width="80" height="60" fill="blue" rx="2" ry="2"radius="2"></rect>
+    <text x="110" y="220" >
+        Block of<tspan x="110" y="240"> Statements</tspan>
+    </text>
+
+    <text x="131" y="305"  stroke-width="0.1">Exit</text>
+<text x="129" y="35"  stroke-width="0.1">Start</text>
+    <polygon points="100,50 200,100 100,150 0,100" fill="red" transform="translate(100,60) scale(0.5)"stroke="black"/> 
+    
+    <text x="300" y="200" fill="white" font-size="20"> No</text>
+    <text x="120" y="150" fill="white"> Yes</text>
+
+<text x="125" y="113"  stroke-width="0.1">Condition</text>
+   </svg> 
+   <h1> Examples</h1>
+   <p>i=0<br>
+while i<=10:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(i)</p>
+<br>i=i+1
+<h1>Output</h1>
+<p> 
+    0<br>
+    1<br>
+    2<br>
+    3<br>
+    4<br>
+    5<br>
+    6<br>
+    7<br>
+    8<br>
+    9<br>
+    10<br>
+</p>
+<p>
+while i<10:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print('Hello')# The loop does not end because the idoes not increment
+    </p>
+    <h1> Output</h1>
+    <p>Hello<br>
+        Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>Hello<br>.........# does not end
+    
+    
+    
+    
+    
+    
+    
+    
+    </p>
+    <h1> For Loop</h1>
+    <p> The for loop in python it is a Definite loop which means it execute the statements repeatly until the last item reached. This is also used if we have a list of thing to loop through, like sequences   that is list, tuple, dict and String . all examples in the below</p>
+    <p>Here , val accessed each item of sequence on each iteration. loop continues until we reach last iteam  </p>
+    <h1> Syntax</h1>
+     <p>For val in sequence:<br>
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; statement
+</p>
+<h1> FlowChart</h1>
+<svg width="500" height="500">
+ <line x1="150" y1="30" x2="150" y2="200"  stroke="black" stroke-width="2"></line>
+ <line x1="60" y1="65" x2="60" y2="250"  stroke="black" stroke-width="2"></line>
+ <line x1="280" y1="110" x2="280" y2="300"  stroke="black" stroke-width="2"></line>
+ <line x1="60" y1="65" x2="150" y2="65"  stroke="black" stroke-width="2"></line>
+ <line x1="60" y1="250" x2="190" y2="250"  stroke="black" stroke-width="2"></line>
+ <line x1="175" y1="300" x2="280" y2="300"  stroke="black" stroke-width="2"></line>
+ <rect  x="125" y="290" width="50" height="20" fill="blue" rx="2" ry="2"radius="2"></rect>
+ <line x1="100" y1="110" x2="280" y2="110"  stroke="black" stroke-width="2"></line>
+ <rect  x="125" y="20" width="50" height="20" fill="blue" rx="2" ry="2"radius="2"></rect>
+ <rect  x="110" y="200" width="80" height="60" fill="blue" rx="2" ry="2"radius="2"></rect>
+ <text x="300" y="200" fill="white" font-size="20"> No</text>
+ <text x="120" y="150" fill="white"> Yes</text>
+ <text x="110" y="220" >
+
+     Body of<tspan x="110" y="240"> For</tspan>
+ </text>
+
+ <text x="131" y="305"  stroke-width="0.1">Exit</text>
+<text x="129" y="35"  stroke-width="0.1">Start</text>
+ <polygon points="100,50 200,100 100,150 0,100" fill="red" transform="translate(100,60) scale(0.5)"stroke="black"/> 
+  
+
+<text x="120" y="113"  stroke-width="0.1" font-size="10">Last item reached?</text>
+</svg>
+<h1> Examples</h1>
+<p> 
+    <br>
+    for num in range(1,10,2)<br>
+    &nbsp; &nbsp; &nbsp;
+
+
+    &nbsp; print(num)</p>
+    <h1>output </h1>
+    <detail><p>1 <br>
+        3<br>
+        5<br>
+        7<br>
+        9<br></p>
+<h1>Program</h1>
+    </detail>
+    <p> names=["Darshan","Tharun","Hemanth"]<br>
+        for name in names<br>
+  &nbsp; &nbsp;&nbsp;&nbsp; print(name)</p>
+  <h1>output</h1>
+  <p>  Darshan<br>
+Tharun<br>
+Hemanth</p>
+<h1>Program</h1>
+<p> tuple=(1,2,3," Darshan ", " Therun", " Hemanth")<br>
+    for tuples in tuple:<br>
+      &nbsp;  &nbsp; &nbsp; print(tuples)</p>
+<h1> Output</h1>
+      <p> 1<br>
+        2<br>
+        3<br>
+         Darshan <br>
+         Therun<br>
+         Hemanth
+
+</p>
+<h1> Program</h1>
+<p>Dictionary = {<br>
+    "name": "Darshan",<br>
+    "age": 19,<br>
+    "Place": "Kolar"<br>
+}<br>
+for key, value in Dictionary.items():<br>
+&nbsp;  &nbsp; &nbsp; 
+print(f"{key}: {value}")
+</p>
+<h1> Output</h1>
+<p>name: Darshan<br>
+    age: 19<br>
+    Place: Kolar<br>
+    </p>
+    <h1> Nested Loop</h1>
+    <p> The python provides the nested loops which means the python code program has  one loop within another loop is called  nested loop .Example in the below</p>
+    <h1> Example</h1>
+    <p> 
+        for i in range(2, 11):<br>
+       &nbsp; &nbsp;&nbsp;    print(f"{i:2} |", end="")<br>
+       &nbsp;&nbsp;      for j in range(2, 11):<br>
+       &nbsp;&nbsp; &nbsp;  &nbsp;&nbsp;&nbsp;    print(f"{i * j:4}", end="")<br>
+       &nbsp;&nbsp;   print()<br>
+        </p>
+        <h1> Output</h1>
+        <p>  2 |   4   6   8  10  12  14  16  18  20<br>
+            3 |   6   9  12  15  18  21  24  27  30<br>
+            4 |   8  12  16  20  24  28  32  36  40<br>
+            5 |  10  15  20  25  30  35  40  45  50<br>
+            6 |  12  18  24  30  36  42  48  54  60<br>
+            7 |  14  21  28  35  42  49  56  63  70<br>
+            8 |  16  24  32  40  48  56  64  72  80<br>
+            9 |  18  27  36  45  54  63  72  81  90<br>
+           10 |  20  30  40  50  60  70  80  90 100</p>
+        </p>
+        <a href="https://darshan-m-sys.github.io/New--website/history.html"> <button class="back">◀️BACK</button></a>
+        <a href="https://darshan-m-sys.github.io/New--website/install.html"><button class="next">NEXT▶️</button></a>
+        <a href=""> <button class="completed" onclick='document.getElementById("completed").innerHTML=alert("Darshan page says 🤗Congragulation🤗 learn well all the best")'>Completed</button></a>
+        
+
+
+
+        </body>
+
+</html>

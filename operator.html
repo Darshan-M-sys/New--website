@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+              background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20211031/pngtree-abstract-bg-image_914283.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+.button{
+    
+    position:absolute;
+    
+    margin-left:5px;
+    margin-top:75px;
+    width:85px;
+    height:30px;
+    font-size: 20px;
+    border-radius:8px;
+    background:#e0e2e1;
+background-repeat:repeat; 
+}
+button:hover{
+animation: pulse 1.5s infinite;
+}
+@keyframes pulse{
+    0%,100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+
+}
+        p{
+            color:white;
+            margin-left:10px ;
+            margin-right: 10px;
+            background: black;
+            border-radius: 20px;
+        }
+        h1{
+            color:rgb(42, 126, 165);
+            -webkit-text-stroke: 0.6px rgb(11, 238, 136);
+            margin-left:10px ;
+            margin-right: 10px; 
+        }
+        .top{
+            width:100%;
+            height:100px; 
+            background-image:url("https://i.imgur.com/Xmvuv4L.jpeg") ;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 20px;
+        }
+        .logo{
+    position:absolute;
+    width:50px;
+    height:50px;
+    margin-left:10px;
+    margin-top: 10px;
+ 
+    filter:drop-shadow(20px 20px 20px transparent);
+border-radius: 20px;
+}
+       
+.back{
+    margin-left:10px;
+    height:30px;
+
+    background:hsl(65, 99%, 53%);
+    border-radius: 6px;
+}
+hr{
+    color:black;
+}
+.next{
+    border-radius: 5px;
+    margin:0 10px 20px 50%;
+height:30px;
+background:hsl(68, 99%, 53%);
+}
+.completed{ 
+    height:30px;
+    background:rgb(0, 251, 255);
+    width:110px;
+    margin: 0 100px 20px 110px;
+    border-radius: 6px;
+}
+.features{
+    
+    margin-right:10px;
+    font-size: 30px;
+    text-align: end;
+    color:rgba(4, 255, 0, 0.679);
+    -webkit-text-stroke: 1px black;;
+animation: chenge  2s linear infinite;
+}
+@keyframes chenge{
+    0%,100%{
+        color:rgb(194, 123, 188);
+    }
+    50%{
+        color:rgb(238, 235, 227)
+    }
+}
+.li1{
+    width: 500px;
+    border:3px black dashed ;
+    border-radius: 10px ;
+    background-color: #e0e2e1;
+    margin-left:15px;
+}
+
+.li{
+    text-align: center;
+    background-color: azure;
+}
+.table{
+    margin-right:30px;
+    margin-left:30px;
+    background-color: antiquewhite;
+    border-radius:5px
+}
+.text1{
+            width:300px;
+            height:300px;
+            border: 2px black  dashed;
+            align-items: center;
+            text-align: center;
+            margin-left: 50px;
+            background-color: rgb(224, 19, 169);
+            border-radius: 20px;
+        }
+        .textb{ 
+            background-color: rgb(0, 255, 238);
+            width: 100px;
+            height: 30px;
+            border-radius: 5px;
+
+        }
+        .table1 {
+            margin-left: 10px;
+            margin-right: 10px;
+            background-color: rgb(127, 255, 212);
+border-radius: 20px;
+        }
+        tr,td,th{
+            border-radius: 6px;
+        }
+        
+        .output{
+            background-color: aqua;
+            margin-left: 200px;
+            width:60px;
+            height: 30px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <a href="https://www.instagram.com/coder.142?igsh=MWY4cXljY3hqcWU5Yw=="> <img  class="logo"src=" https://i.imgur.com/ibTresR.jpeg"></a>
+        <button class="button">HOME</button>
+        <h2 class="features">Welcome To <br>Operators</h2>
+<br> 
+
+
+    </div><hr>
+    <h1>
+        Meaning
+    </h1>
+    <p> The operators is a symbols that tell to python interpreter to do specific task . and those operator need some Oprends that is value. 
+        many operator perform some mathematical operations and manipulation.</p>
+        <h1>Types</h1>
+        <div class="li1">
+        <ol  class="li"type="I">
+            <li>Arithmetic operators</li>
+            <li> Relational operators</li>
+            <li> Logical operators</li>
+            
+            <li> Membership operators</li>
+            <li> Bitwise operators</li>
+            
+            <li> Identity operators</li>
+            <li> Assignment operators</li>
+        </ol> 
+        </div><br>
+        <h1><u><strong> Arithmetic operators</strong></u></h1>
+        <p> The arithmetic operators to form a mathematical operations like addition , subtract , multiplication, division, modules</p>
+        <table border="2" class="table">
+            <tr>
+                <TH>Description</TH>
+                <th> operators</th>
+            </tr>
+            <tr>
+                <td>Addition</td>
+                <td>+</td>
+                <tr> 
+                    <td>Subtraction</td>
+                    <td>-</td>
+                </tr>
+                
+               <tr>
+                <td> Multiplication</td>
+                <td> *</td>
+               </tr>
+               <tr>
+               <td>Exponent</td>
+               <td>**</td>
+               </tr>
+               <tr>
+                <td>Division</td>
+                <td>/</td>
+               </tr>
+               <tr>
+               <td> Floor Division</td>
+               <td>//</td>
+               </tr>
+                <tr>
+                    <td> Modules</td>
+                    <td> %</td>
+                </tr>
+
+          
+        </table>
+        <br>
+        <table  class="table1"border="2">
+            <tr> 
+                <th> Operators</th>
+                <th> Explaination</th>
+            </tr>
+            <tr>
+                <td> Addition(+)</td>
+            <td> The addition adds the two Oprends and returns the value it is a type of mathematical operator</td></tr>
+            <tr>
+                <td> Subtract (-)</td>
+                <td> The subtract operator is Subtract the two operands and returns the value or result</td>
+
+            </tr>
+            <tr>
+                <td> Multiplication (*)</td>
+                <td> The multiplication is multiply the two operans and returns the value and result.
+
+                </td>
+            </tr>
+            <tr>
+                <td> Exponent(**)</td>
+                <td> The Exponent operator is used to find the power value 3<sup>2 and returns the value</sup></td>
+            </tr>
+            <tr>
+                <td> Division (/)</td>
+                <td> The division operator is use to divide the two operands and return the value</td>
+            </tr>
+            <tr>
+                <td> Floor Division</td>
+                <td> The floor  division is like a divide the two operands and returns the value It is just like a Integer  and returns  the vaule without fractional point value
+            </tr>
+        </table>
+        <br>
+        <h1>Examples</h1>
+        
+    <div class="text1">
+        <h2 class="text" id="textToCopy">x=10<br>
+            y=5<br>
+            print(x+y)<br>
+            print(x-y)<br>
+            print(x*y)
+            <br>print(x**y)<br>
+            print(x/y)
+            <br>print(x//y)
+
+
+        </h2>
+                                <button class="textb" onclick="copyText()">Copy Text</button>
+                                </div>
+                                <br>
+    <h1 >output</h1><p id="output"></p>
+    <button class="output" onclick=' document.getElementById("output").innerHTML="15<br>5<br>50<br>100000<br>2.0<br>2<br>"'>Output</button>
+
+    <script>
+        function copyText() {
+          
+            let tempInput = document.createElement("input");
+            tempInput.value = document.getElementById("textToCopy").innerText;
+            document.body.appendChild(tempInput);
+
+            tempInput.select();
+            document.execCommand("copy");
+
+  
+            document.body.removeChild(tempInput);
+
+            alert("Text copied!");
+        }
+    </script>
+    <br>
+    <h1><u><strong> Relational Operators</strong></u></h1>
+    <P> The relational operator is used to form a relational expressions and result is boolean value either true or false and this is also called comparison operators  mainly used for  evaluate Conditional  expressions</P>
+    <table border="2" class="table">
+        <tr>
+            <th> Description</th>
+            <th>Operators</th>
+        </tr>
+        <tr>
+            <td> Less then</td>
+            <td><</td>
+        </tr>
+        <tr>
+            <td> Greater then</td>
+            <td> ></td>
+        </tr>
+        <tr> 
+            <tr> 
+                <td> Less then or Equal</td>
+                <td><=</td>
+            </tr>
+            <tr>
+                <td> Greater then or Equal </td>
+                <td> >=</td>
+            </tr>
+            <tr> 
+                <td> Equal</td>
+                <td>=</td>
+            </tr>
+            <tr>
+                <td> Double Equal</td>
+                <td> ==</td>
+            </tr>
+        
+            
+            <tr> 
+                <td>Not Equal </td>
+                <td> !=</td>
+
+            </tr>
+        </tr>
+    </table>
+    <br>
+    <h1>Example</h1>
+    <div class="text1">
+        <h2 class="text" id="textToCopy">x=10<br>
+            y=5<br>
+            print(x>y)<br>
+            <p></p>
+            print(x<=y)<br>
+            
+            
+            print(x<=y)
+            <br>print(x>=y)<br>
+            print(x=y)
+            <br>print(x==y)<br>
+            
+            print(x!=y)
+
+
+        </h2>
+                                <button class="textb" onclick="copyText()">Copy Text</button>
+                                </div>
+                                <br>
+    <h1 >output</h1><p id="output9"></p>
+    <button class="output" onclick=' document.getElementById("output9").innerHTML="True<br>False<br>True<br>False<br>false<br>True<br>"'>Output</button>Output</button>
+<br>
+<h1> <u><strong>Logical Operator </strong></u></h1>
+<p> The logical operator is  combination of two or more relational  operator .  It is also used find the conditional expressions. The value should be either true or False boolean  value AND OR NOT</p>
+<table border="2 "class="table">
+    <tr> <Th>
+        Description
+        </Th>
+        <th> Operators</th>
+    </tr>
+    <tr>
+        <td> Logical AND</td>
+        <td> And</td>
+    </tr>
+    <tr>
+        <td> Logical OR</td>
+        <td>Or</td>
+    </tr>
+    <tr>
+        <td> Logical Not</td>
+        <td> !</td>
+    </tr>
+</table>
+<h1>Example</h1>
+
+<div class="text1">
+    <h2 class="text" id="textToCopy">x=10<br>
+        y=5<br>
+       <div></div> 
+       <div></div> 
+        print(x>y And x=y)<br>
+        
+        
+        print(x<=y Or x=y)
+        <br>
+        print(x!=y)
+        <br>
+        </h2>
+        
+        <button class="textb" onclick="copyText()">Copy Text</button>
+    </div>
+    <br>
+        </div>
+        <h1 >output</h1><p id="output4"></p>
+        <button class="output" onclick=' document.getElementById("output4").innerHTML="False<br>False<br>True<br>"'>Output</button>
+    </div>
+    <h1> <u> <strong> Assignment Operators</strong></u></h1>
+    <p> The assignment operator is used to put or assign  value to the variable by useing = (equal)  abs lift-side operand is assigned to the right-side operand that is shown in the below . but the python provides the short hand assignemt operator . like += -= 
+        etc<br> syntax  operand mathematical operator = value
+
+    </p>
+   <h1> Operators</h1>
+   <table border="2" class="table">
+    <tr>
+        <th>Operator</th>
+        <th> Explaination</th>
+        <th> Example</th>
+    </tr>
+    <tr> <td><center>=</center></td>
+    <td> The equal operator assigned the value of lift-side operand from right-side operand that is shown in example</td>
+<td> a=10<br>
+b=a <br> 
+print(a)<br>
+print(b) <br>
+output:10<br>10</td></tr>
+    <tr>
+        <td> <center>+=</center></td>
+        <td> The += it adds the value of two operand and the value assigned in left-side operand that is shown in example</td>
+        <td> a=10<br>
+            b=10<br>
+            a+=b<br>
+            print(a)<br>
+            output:20
+        </td>
+    </tr>
+    <tr> 
+        <td> <center>-=</center></td>
+        <td>The -= it subtract the value of two operand and the value assigned in left-side operand that is shown in example</td>
+    
+    
+    <td> a=10<br>
+        b=5<br>
+        a-=b<br>
+        print(a)<br>
+        output:5
+    </td>
+    </tr>
+    <tr>
+        <td> <center>+=</center></td>
+        <td> The += it adds the value of two operand and the value assigned in left-side operand that is shown in example</td>
+        <td> a=10<br>
+            b=10<br>
+            a+=b<br>
+            print(a)<br>
+            output:20
+        </td>
+    </tr>
+    <tr> 
+        <td> <center>*=</center></td>
+        <td>The *= it multiply the value of two operand and the value assigned in left-side operand that is shown in example</td>
+    
+    
+    <td> a=10<br>
+        b=5<br>
+        a*=b<br>
+        print(a)<br>
+        output:50
+    </td>
+    </tr>
+    <tr>
+        <td> <center>/=</center></td>
+        <td> The /= it divide the value of two operand and the value assigned in left-side operand that is shown in example</td>
+        <td> a=10<br>
+            b=10<br>
+            a/=b<br>
+            print(a)<br>
+            output:0
+        </td>
+    </tr>
+    <tr> 
+        <td> <center>%=</center></td>
+        <td>The %= it divides  the value of two operand and the value assigned in left-side operand that is shown in example</td>
+    
+    
+    <td> a=10<br>
+        b=5<br>
+        a%=b<br>
+        print(a)<br>
+        output:5
+    </td>
+
+    </tr>
+   </table>
+   <h1> <u><strong> Bitwise Operators</strong></u></h1>
+   <p> The bitwise Operators in python is perform the bt level and binary bit operations . The python  bitwise operator is performs a indiviual bits at the bit level  the Examples shown below</p>
+   <table border="2" class="table">
+    <tr>
+        <th>Operators</th>
+        <th> Explaination</th>
+        <th> Example</th>
+    </tr>
+    <tr>
+        <td><center>&</center></td>
+        <td> Bitwise AND(&) operator is performs individual bits if sameplace 1 having then the output is 1 other wise 0. </td>
+   <td> a=5#0101<br>
+    b=3#0011<br>
+    print(a&b)
+    output:1 #0001
+
+   </td>
+
+    </tr>
+    <tr>
+        <tr>
+            <td><center>|</center></td>
+            <td> Bitwise OR(|) operator is performs individual bits if sameplace 0 having then the output is 0 other wise 1. </td>
+       <td> a=5#0101<br>
+        b=3#0011<br>
+        print(a|b)
+        output:7 #0111
+    
+       </td>
+    </tr>
+    
+    <tr>
+        <td><center>^</center></td>
+        <td> Bitwise XOR(^) operator is performs individual bits if sameplace 0 having then the output is 0 and sameplace having 1 then the output is 0 if different number bits  output is 1. </td>
+   <td> a=5#0101<br>
+    b=3#0011<br>
+    print(a^b)
+    output:6 #0110
+
+   </td>
+</tr>
+    
+<tr>
+    <td><center><<</center></td>
+    <td> Bitwise Left-shipt(<<) operator . The left operand value is shifted left by the number of bits given in the right operand . </td>
+<td> a=0101<br>
+print(a<<<2)<br>
+output:20
+
+</td>
+</tr>
+
+<tr>
+    <td><center>>></center></td>
+    <td> Bitwise Left-shipt(>>) operator . The left operand value is shifted left by the number of bits given in the right operand . </td>
+<td> a=0101<br>
+print(a>>2)<br>
+output:1
+
+</td>
+</tr>
+
+
+
+   </table>
+   <h1><u><strong> Membership Operators</strong></u></h1>
+   <p> The membership operator is used to check the  particular element is particular sequence such as string ,array,list,tuple etc  there are two types in and not in.</p>
+   <h1> In </h1>
+   <p> a=[1,2,3,]<br>
+3 in a <br>
+True </div></p>
+   
+   <h1>Not In</h1>
+   <p> a=[1,2,3]<br>
+3 not in a<br>
+False </p>
+<h1><u><strong> Identity Operator </strong></u></h1>
+<p> The python offers the two types of identity operators is or not is  if the variable having the same value it shown in the below example</p>
+<h1>IS</h1>
+<p> name="darshan"<br>
+    myName="darshan"
+<br>
+ name is myname <br>
+True</p><h1> NOT IS</h1>
+<p> name="darshan"<br>
+    myName="darshan"
+<br>
+ name  Not is myname <br>
+False</p>
+    <div>
+        
+      
+    <a href="https://darshan-m-sys.github.io/New--website/history.html"> <button class="back">◀️BACK</button></a>
+    <a href="https://darshan-m-sys.github.io/New--website/install.html"><button class="next">NEXT▶️</button></a>
+    <a href=""> <button class="completed" onclick='document.getElementById("completed").innerHTML=alert("Darshan page says 🤗Congragulation🤗 learn well all the best")'>Completed</button></a>
+ 
+</body>
+</html>

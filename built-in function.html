@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+     background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20211031/pngtree-abstract-bg-image_914283.png");
+     background-repeat: repeat;
+     background-size: cover;
+ }
+ 
+.button{
+
+position:absolute;
+
+margin-left:5px;
+margin-top:75px;
+width:85px;
+height:30px;
+font-size: 20px;
+border-radius:8px;
+background:#e0e2e1;
+background-repeat:repeat; 
+}
+button:hover{
+animation: pulse 1.5s infinite;
+}
+@keyframes pulse{
+0%,100%{
+ transform: scale(1);
+}
+50%{
+ transform: scale(1.1);
+}
+
+}
+ol{
+    color:rgb(243, 13, 247)
+}
+ p{
+     color:white;
+     margin-left:10px ;
+     margin-right: 10px;
+     background: black;
+     border-radius: 20px;
+ }
+ h1{
+     color:rgb(42, 126, 165);
+     -webkit-text-stroke: 0.6px rgb(11, 238, 136);
+     margin-left:10px ;
+     margin-right: 10px; 
+ }
+ .top{
+     width:100%;
+     height:100px; 
+     background-image:url("https://i.imgur.com/Xmvuv4L.jpeg") ;
+     background-repeat: no-repeat;
+     background-size: cover;
+     border-radius: 20px;
+ }
+ 
+.back{
+margin-left:10px;
+height:30px;
+
+background:hsl(65, 99%, 53%);
+border-radius: 6px;
+}
+hr{
+color:black;
+}
+.next{
+border-radius: 5px;
+margin:0 10px 20px 50%;
+height:30px;
+background:hsl(68, 99%, 53%);
+}
+.completed{ 
+height:30px;
+background:rgb(0, 251, 255);
+width:110px;
+margin: 0 100px 20px 110px;
+border-radius: 6px;
+}
+.more{
+
+width:50px;
+height:30px;
+border-radius: 6px;
+background: rgb(0, 238, 255);
+margin-left:250px;
+}
+.features{
+
+margin-right:10px;
+font-size: 30px;
+text-align: end;
+color:rgba(4, 255, 0, 0.679);
+-webkit-text-stroke: 1px black;;
+animation: chenge  2s linear infinite;
+}
+@keyframes chenge{
+0%,100%{
+ color:rgb(194, 123, 188);
+}
+50%{
+ color:rgb(238, 235, 227)
+}
+}
+.logo{
+position:absolute;
+width:50px;
+height:50px;
+margin-left:10px;
+margin-top: 10px;
+
+filter:drop-shadow(20px 20px 20px transparent);
+border-radius: 20px;
+}
+
+
+.icon{
+
+
+    
+    background-image: url("https://i.imgur.com/duuvvTR.png");
+    background-repeat: no-repeat;
+    
+}
+</style>
+
+ 
+</head>
+<body>
+        
+    <div class="top">
+        <a href="https://www.instagram.com/coder.142?igsh=MWY4cXljY3hqcWU5Yw=="> <img  class="logo"src=" https://i.imgur.com/ibTresR.jpeg"></a>
+        <button class="button">HOME</button>
+        <h2 class="features">Welcome To <br>Built-in Function</h2>
+
+    </div><hr>
+    <div class="icon">
+    <h1> Built-in Functions In Python</h1>
+    <p> Built in function in python means that functions is already defined later programmer can use that functions when require . that built in functions has set of code taht is pre-defined like libraries, packages. the built in functions is immutable we can't change that pre-defined code.</p>
+<p> The built in functions was designed for simplify the code and it make python code  less memory . some predeined functions is input(), print(), int(), other</p>    
+<h1>Examples</h1>
+<h1>Console Input() Function</h1>
+<p> The input function is a built in function used for get the input from the user. and the input function is user information is treated as a string </p>
+<p> When user Enter the number but it treated as a string . later we can convert into int by using int() function.</p>
+<h1>Example</h1>
+<p> X=input('please Enter your age:')</p>
+<p> Converting str to int</p>
+<p>x=int(input(' please enter ur age'))</p>
+<h1>Console Output(print()) Function</h1>
+<p> The output in python is displaying the result in the device. by we getting the input from the user but we want to display that data so . we using print() function</p>
+<p> print() function displaying the result without loss of input data</p>
+<h1>Example</h1>
+<p> print(x)# input data<br>
+output: please Enter ur age: 20 </p>
+</div>
+<a href="https://darshan-m-sys.github.io/New--website/history.html"> <button class="back">◀️BACK</button></a>
+<a href="https://darshan-m-sys.github.io/New--website/install.html"><button class="next">NEXT▶️</button></a>
+<a href=""> <button class="completed" onclick='document.getElementById("completed").innerHTML=alert("Darshan page says 🤗Congragulation🤗 learn well all the best")'>Completed</button></a>
+
+</body>
+</html>

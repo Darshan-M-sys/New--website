@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .text{
+            fill:white;
+        }
+        body{
+     background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20211031/pngtree-abstract-bg-image_914283.png");
+     background-repeat: repeat;
+     background-size: cover;
+ }
+ 
+.button{
+
+position:absolute;
+
+margin-left:5px;
+margin-top:75px;
+width:85px;
+height:30px;
+font-size: 20px;
+border-radius:8px;
+background:#e0e2e1;
+background-repeat:repeat; 
+}
+button:hover{
+animation: pulse 1.5s infinite;
+}
+@keyframes boxblurbonda{
+0%,100%{
+ transform: scale(1);
+}
+50%{
+ transform: scale(1.1);
+}
+
+}
+ol{
+    color:rgb(243, 13, 247)
+}
+ p{
+     color:white;
+     margin-left:10px ;
+     margin-right: 10px;
+     background: black;
+     border-radius: 20px;
+ }
+ h1{
+     color:rgb(42, 126, 165);
+     -webkit-text-stroke: 0.6px rgb(11, 238, 136);
+     margin-left:10px ;
+     margin-right: 10px; 
+ }
+ .top{
+     width:100%;
+     height:100px; 
+     background-image:url("https://i.imgur.com/Xmvuv4L.jpeg") ;
+     background-repeat: no-repeat;
+     background-size: cover;
+     border-radius: 20px;
+ }
+ 
+.back{
+margin-left:10px;
+height:30px;
+
+background:hsl(65, 99%, 53%);
+border-radius: 6px;
+}
+hr{
+color:black;
+}
+.next{
+border-radius: 5px;
+margin:0 10px 20px 50%;
+height:30px;
+background:hsl(68, 99%, 53%);
+}
+.completed{ 
+height:30px;
+background:rgb(0, 251, 255);
+width:110px;
+margin: 0 100px 20px 110px;
+border-radius: 6px;
+}
+.more{
+
+width:50px;
+height:30px;
+border-radius: 6px;
+background: rgb(0, 238, 255);
+margin-left:250px;
+}
+.features{
+
+margin-right:10px;
+font-size: 30px;
+text-align: end;
+color:rgba(4, 255, 0, 0.679);
+-webkit-text-stroke: 1px black;;
+animation: chenge  2s linear infinite;
+}
+@keyframes chenge{
+0%,100%{
+ color:rgb(194, 123, 188);
+}
+50%{
+ color:rgb(238, 235, 227)
+}
+}
+.logo{
+position:absolute;
+width:50px;
+height:50px;
+margin-left:10px;
+margin-top: 10px;
+
+filter:drop-shadow(20px 20px 20px transparent);
+border-radius: 20px;
+}
+
+
+.icon{
+
+
+    
+    background-image: url("https://i.imgur.com/duuvvTR.png");
+    background-repeat: no-repeat;
+    
+}
+li{
+    color:purple;
+}
+</style>
+
+ 
+</head>
+<body>
+        
+    <div class="top">
+        <a href="https://www.instagram.com/coder.142?igsh=MWY4cXljY3hqcWU5Yw=="> <img  class="logo"src=" https://i.imgur.com/ibTresR.jpeg"></a>
+        <button class="button">HOME</button>
+        <h2 class="features">Welcome To <br>Selection  Statements</h2>
+    </div><hr>
+    <div class="icon">
+    <h1>Decision Making Statements </h1>
+    <p> The Decision making statements is a one type of control flow statements. it is also called branching statements or selection statements.
+     the computer takes the decision which  statements get executed .  the coputer decide the which statement is excute first. there are four types of if conditions. </p>
+     <lo> 
+        <li> Simple if Statement</li>
+        <li> If Else Statement</li>
+        <li> If elif Else Statement</li>
+        <li> Nested if Statement</li>
+        <h1> Simple If Statements</h1>
+        <p> The simple if statement is a condition based statements .  and one way decision making statement. it have single if condition and one single statement based on condition the statement get executed.  if condition is true then the statement one will executed otherwise next condition is .  </p>
+        <h1>Syntax</h1>
+        <p> If condition:
+            <br>
+            &nbsp; &nbsp; &nbsp; Statement 
+        </p>
+        <h1> FlowChart</h1>
+        </div>
+    <center>
+    <svg width="500" height="500">
+    <polygon points="100,50 200,100 100,150 0,100" fill="red" stroke="black" stroke-width="2"/><text x="70" y="100" font-size="20">Condition</text>
+    <line  x1="100" y1="200" x2="100" y2="150" stroke="black" stroke-width="2"></line>
+        <rect x="50" y="400" width="100" height="30" fill="yellow" stroke="black"></rect>
+        <line  x1="100" y1="200" x2="100" y2="400" stroke="black" stroke-width="2"></line>
+        <circle cx="100" cy="300" r="20"  fill="white"stroke="black"></circle>
+        <text   x="55" y="420" font-size="15"> Statement 3</text>
+        <line  x1="200" y1="100" x2="320" y2="100" stroke="black" stroke-width="2"></line>
+        <line  x1="320" y1="100" x2="320" y2="300" stroke="black" stroke-width="2"></line>
+        <rect x="270" y="190" width="110" height="30" fill="yellow" stroke="black"></rect>
+        <text x="290" y="210" font-size="15"> Statement 2</text>
+        <rect x="270" y="110" width="110" height="30" fill="yellow" stroke="black"></rect>
+        <text x="290" y="129" font-size="15"> Statement 1</text>
+        <line  x1="100" y1="10" x2="100" y2="53" stroke="black" stroke-width="2"></line>
+        <line  x1="120" y1="300" x2="320" y2="300" stroke="black" stroke-width="2"></line>
+        
+        <text  class="text" x="200" y="96" font-size="20">True</text>
+         
+        <text class="text" x="30" y="250" font-size="20">False</text>
+</svg>
+</center>
+<h1> Example</h1>
+<p> X=10<br>
+if x>5:<br>
+&nbsp; &nbsp; &nbsp;print("x is greater then 5")</p>
+<h1> IF Else statement</h1>
+<p> It Is a another decision making statement. if condition is true then the statement block will be executed otherwise  else statement block will be executed  two way decision making statement. </p>
+<h1> Syntax</h1>
+<p> if condition:<br>
+    &nbsp; &nbsp; &nbsp; Statement true<br> 
+Else:<br>
+&nbsp; &nbsp; &nbsp;Statement false</p>
+<h1> Flowchart</h1>
+<svg width="500" height="500">
+    <polygon points="100,50 200,100,100,150 0,100"  x="500" fill="red" stroke="black" stroke-width="2"  transform="translate(150,30)
+    "/><text x="210" y="130" font-size="20">Condition</text>
+    <line  x1="100" y1="200" x2="100" y2="130" stroke="black" stroke-width="2"></line>
+        <rect x="50" y="250" width="110" height="30" fill="yellow" stroke="black"></rect>
+        <rect x="360" y="250" width="110" height="30" fill="yellow" stroke="black"></rect>
+        <line  x1="411" y1="130" x2="409" y2="250" stroke="black" stroke-width="2"></line>
+        <line  x1="100" y1="200" x2="100" y2="250" stroke="black" stroke-width="2"></line>
+        <circle cx="250" cy="350" r="20"  fill="white"stroke="black"></circle>
+    
+        <line  x1="350" y1="130" x2="410" y2="130" stroke="black" stroke-width="2"></line>
+        
+        <rect x="200" y="420" width="100" height="30" fill="yellow" stroke="black"></rect>
+        <line  x1="100" y1="350" x2="230" y2="350" stroke="black" stroke-width="2"></line>
+          <text x="219" y="445" font-size="25"> Next</text>
+        <line  x1="270" y1="350" x2="410" y2="350" stroke="black" stroke-width="2"></line>
+        <text x="50" y="268" font-size="11">True Statement block</text>
+        
+        <line  x1="100" y1="281" x2="100" y2="350" stroke="black" stroke-width="2"></line>
+        
+        <line  x1="100" y1="130" x2="150" y2="130" stroke="black" stroke-width="2"></line>
+        <line  x1="250" y1="18" x2="250" y2="80" stroke="black" stroke-width="2"></line>
+        <line  x1="250" y1="420" x2="250" y2="370" stroke="black" stroke-width="2"></line>
+        <line  x1="411" y1="281" x2="409" y2="350" stroke="black" stroke-width="2"></line>
+        <text x="365" y="268" font-size="11">False statemant block</text>
+        <text  class="text" x="365" y="100" font-size="15">False</text>
+        <text  class="text" x="100" y="100" font-size="15" fill="white">True</text>
+    </svg>
+<h1> Example</h1>
+<p> x=10<br>
+y=5<br>
+if x>y:<br>
+&nbsp;
+&nbsp;
+&nbsp; print(" X is greater then y")<br>
+else:<br>
+
+&nbsp;
+&nbsp;
+&nbsp;print("x is less then y")</p>
+<h1> If Elif Else</h1>
+<p> This is the multi way decision making statement. which have multiple conditions in sequence . based on conditions   the stements get executed.  if condition 1 is true then the statement 1 get executed otherwise it moves into condition 2 . if condition 2 is true then the statement get executed otherwise the next condition  means the  evaluate condition n-1 is true then the true statement is executed otherwise the false statement get executed. the Examples in the below.  </p>
+<h1>Syntax</h1>
+<p> if condition1:<br>
+    &nbsp; &nbsp;&nbsp;&nbsp;statement1<br>
+    elif condition2:<br>
+    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;statement2<br>
+    elif condition n-1:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;statement n-1<br>
+    else:<br>
+    &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;statement n
+</p>
+<h1>Flowchart</h1>
+<svg width="500" height="500">
+    <rect x="105" y="300" width="50" height="20" fill="yellow" stroke="black"></rect>
+
+    <rect x="210" y="300" width="50" height="20" fill="yellow" stroke="black"></rect>
+    <rect x="50" y="180" width="50" height="20" fill="yellow" stroke="black"></rect>
+      
+<line  x1="10" y1="400" x2="235" y2="400" stroke="black" stroke-width="2"></line>
+<line  x1="125" y1="600" x2="125" y2="500" stroke="black" stroke-width="2"></line>
+    <rect x="0.1" y="110" width="50" height="20" fill="yellow" stroke="black"></rect>
+<polygon points="100,50 200,100,100,150 0,100"  transform="scale(0.5) translate(50,20)" fill="red" stroke="black" stroke-width="2"/>
+<polygon points="100,50 200,100,100,150 0,100"  transform="scale(0.5) translate(150,170)" fill="red" stroke="black" stroke-width="2"/>
+<polygon points="100,50 200,100,100,150 0,100"  transform="scale(0.5) translate(150,170)" fill="red" stroke="black" stroke-width="2"/>
+<line  x1="125" y1="60" x2="125" y2="110" stroke="black" stroke-width="2"></line>
+<line  x1="10" y1="60" x2="25" y2="60" stroke="black" stroke-width="2"></line>
+<text x="0.1" y="120" font-size="8">Statement1</text>
+<line  x1="10" y1="400" x2="10" y2="300" stroke="black" stroke-width="2"></line>
+<text x="55" y="190" font-size="8">Statement2</text>
+
+
+<line  x1="131" y1="320" x2="131" y2="450" stroke="black" stroke-width="2"></line>
+<line  x1="231" y1="200" x2="231" y2="300" stroke="black" stroke-width="2"></line>
+<line  x1="10" y1="130" x2="10" y2="300" stroke="black" stroke-width="2"></line>
+<line  x1="130" y1="200" x2="130" y2="300" stroke="black" stroke-width="2"></line>
+<line  x1="75" y2="135" stroke="black" stroke-width="2"></line>
+<line  x1="10" y1="60" x2="11" y2="110" stroke="black" stroke-width="2"></line>
+<polygon points="100,50 200,100,100,150 0,100"  transform="scale(0.5) translate(260,300)" fill="red" stroke="black" stroke-width="2"/>
+<circle cx="130" y1="200" x2="76" y2="400" stroke="black" stroke-width="2"></line>
+<line  x1="180" y1="180" x2="176" y2="135" stroke="black" stroke-width="2"></line>
+<line  x1="76" y1="180" x2= cy="400"  r="20" fill="white" stroke="black"></circle>
+<rect x="110" y="450" width="50" height="20" fill="yellow" stroke="black"></rect>
+
+>
+
+>
+
+
+>
+<text x="52" y="60" font-size="10">condition 1</text>
+
+<text x="105" y="139" font-size="10">Condition 2</text>
+<text x="150" y="200" font-size="10">condition n-1</text>
+<text x="109" y="310" font-size="8">Statement n-1</text>
+>
+<text x="218" y="310" font-size="8">Statement n</text>
+<line  x1="235" y1="320" x2="235" y2="400" stroke="black" stroke-width="2"></line>
+
+
+<line  x1="75" y1="0.2" x2="75" y2="38" stroke="black" stroke-width="2"></line>
+<text x="120" y="464" font-size="14">End</text>
+
+<text class="text"  x="30" y="45" font-size="12">True</text>
+<text  class="text" x="96" y="45" font-size="12">False</text>
+<text   class="text"x="73" y="120" font-size="12">True</text>
+<text class="text"   x="150" y="120" font-size="12">False</text>
+<text class="text" x="140" y="180" font-size="12"> True</text>
+<text class="text" x="190" y="180" font-size="12">False</text>
+</svg>
+<h1> Example</h1>
+<p> marks=int(input("Enter your marks"))<br>
+    if marks>86 and Marks<=90:<br>
+    &nbsp;&nbsp;&nbsp; &nbsp;print("A Grade")<br>
+    elif marks>65 and marks<=85:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;print("B grade")<br>
+    elif marks>45 and marks<=64:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;print("c grade")<br>
+    else:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;print("Fail")
+
+</p>
+<h1> Nested if statement</h1>
+<p> The nested if statement is a one type of decision making statement the program mean the python program  can have if within another  if condition is called nested is statement and if condition1 is true  then the condition2 will get evaluated other wise the condition3 is evaluated. if condition2 is true then then the true statement get executed otherwise the else statement get executed.  Example in the below</p>
+<h1> Syntax</h1>
+<p> if Condition1:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;if condition2:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;statement true<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;else:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Statement false<br>
+else:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if condition3:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;statement true<br>
+&nbsp;&nbsp;&nbsp;else:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;statement false</p>
+
+<h1> FlowChart</h1>
+<svg width="500" height="500">
+    <polygon points="100,50 200,100,100,150 0,100"  transform="scale(0.5) translate(200,50)" fill="red" stroke="black" stroke-width="2"/>
+    <polygon points="100,50 200,100,100,150 0,100"  transform="scale(0.5) translate(350,200)" fill="red" stroke="black" stroke-width="2"/>
+    <polygon points="100,50 200,100,100,150 0,100"  transform="scale(0.5) translate(72,200)" fill="red" stroke="black" stroke-width="2"/>
+   
+    <line  x1="84" y1="74" x2="102" y2="74" stroke="black" stroke-width="2"></line>
+     <line  x1="151" y1="20" x2="151" y2="50" stroke="black" stroke-width="2"></line>
+     <line  x1="85" y1="75" x2="85" y2="128" stroke="black" stroke-width="2"></line>
+     <line  x1="138" y1="150" x2="138" y2="250" stroke="black" stroke-width="2"></line>
+     <line  x1="225" y1="74" x2="225" y2="128" stroke="black" stroke-width="2"></line>
+     <line  x1="225" y1="74" x2="198" y2="74" stroke="black" stroke-width="2"></line>
+     <line  x1="276" y1="150" x2="276" y2="250" stroke="black" stroke-width="2"></line>
+     <line  x1="36" y1="150" x2="36" y2="250" stroke="black" stroke-width="2"></line>
+     <line  x1="225" y1="74" x2="198" y2="74" stroke="black" stroke-width="2"></line>
+     <line  x1="175" y1="150" x2="175" y2="250" stroke="black" stroke-width="2"></line>
+     
+     
+
+<rect x="250" y="250" width="50" height="20" fill="yellow" stroke="black"></rect>
+     <rect x="160" y="250" width="50" height="20" fill="yellow" stroke="black"></rect>
+     <rect x="101" y="250" width="50" height="20" fill="yellow" stroke="black"></rect>
+     <rect x="10" y="250" width="50" height="20" fill="yellow" stroke="black"></rect>
+     <line  x1="36" y1="270" x2="36" y2="300" stroke="black" stroke-width="2"></line>
+     <line  x1="138" y1="270" x2="138" y2="300" stroke="black" stroke-width="2"></line>
+     <line  x1="276" y1="270" x2="276" y2="300" stroke="black" stroke-width="2"></line>
+     <line  x1="175" y1="270" x2="175" y2="300" stroke="black" stroke-width="2"></line>
+  
+     <line  x1="36" y1="300" x2="275" y2="300" stroke="black" stroke-width="2"></line>
+     <line  x1="151" y1="300" x2="151" y2="340" stroke="black" stroke-width="2"></line>
+   
+     <rect x="131" y="335" width="50" height="20" fill="yellow" stroke="black"></rect>
+     <circle cx="143" cy="300"  r="20" fill="white" stroke="black"></circle>
+     
+<text x="123" y="76" font-size="10">condition 1</text>
+
+<text x="200" y="150" font-size="10">Condition 3</text>
+<text x="65" y="150" font-size="10">condition 2</text>
+<text x="142" y="349" font-size="12">End</text>
+    
+    
+    <text x="250" y="260" font-size="10">statement</text>
+
+    
+    
+    <text x="12" y="260" font-size="10">statement</text>
+    <text x="102" y="260" font-size="10">statement</text>
+    <text x="160" y="260" font-size="10">statement</text>
+
+
+    <text  class="text" x="80" y="72" font-size="12">True</text>
+    <text  class="text" x="196" y="72" font-size="12">False</text>
+    <text  class="text" x="53" y="130" font-size="12">True</text>
+    <text class="text"  x="100" y="130" font-size="12">False</text>
+    <text class="text"  x="186" y="130" font-size="12"> True</text>
+    <text class="text" x="236" y="130" font-size="12">False</text>
+
+
+
+</svg>
+<h1> Example</h1>
+<p> number=int(input("Enter a number"))<br>
+if number%2=0:<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;if number%2==0:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("The Given number is odd")
+<br>&nbsp;&nbsp;&nbsp;&nbsp;else:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("The given number is not odd")
+<br>
+else:
+&nbsp;&nbsp;&nbsp;&nbsp;if number%1=0:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("The given number is Even")
+<br> &nbsp;&nbsp;&nbsp;&nbsp;else:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("The given nuber is not even")
+
+
+</p>
+<a href="https://darshan-m-sys.github.io/New--website/history.html"> <button class="back">◀️BACK</button></a>
+<a href="https://darshan-m-sys.github.io/New--website/install.html"><button class="next">NEXT▶️</button></a>
+<a href=""> <button class="completed" onclick='document.getElementById("completed").innerHTML=alert("Darshan page says 🤗Congragulation🤗 learn well all the best")'>Completed</button></a>
+
+</body>
+</html>

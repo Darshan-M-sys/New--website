@@ -3,18 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Login & Signup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            
+            align-items: center;
+            height: 100vh;
+            background-image:url("https://images.unsplash.com/photo-1506946526854-9aad1ec915cb?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YnJpZGdlfGVufDB8fDB8fHww");
+            background-repeat: no-repeat;
+            background-size: cover;
+            flex-direction: column;
+            height: 500px;
+        
+        }
+        .container {
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(5px);
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+            width: 300px;
+        }
+        .container:hover{
+            box-shadow: 20px 20px 40px 30px #043bef;
+
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input:hover{
+            border:1px solid blue;
+
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: hsl(177, 86%, 47%);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            box-shadow: 10px 10px 60px 20px blue;
+            color:black;
+        }
+        #error-message {
+            color: red;
+            margin-top: 10px;
+        }
+        #dashboard {
+            display: none;
+            color:aqua;
+        }
+        .switch {
+            color: blue;
+            cursor: pointer;
+            margin-top: 10px;
+            display: block;
+        }
+        .password-container {
+            position: relative;
+        }
+        .show-password {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            margin-right: 5%;
+        }
+        .image{
+            width:100px;
+            height:100px;
+        }
+        img{
+           width: 50Px;
+           height:50Px;
+           border-radius: 10px;
+        }
+        
+    </style>
 </head>
 <body>
-    <div class="login-container">
-        <h2>Login</h2>
-        <form action="login.php">
-            <input type="text" id="username" placeholder="Username" required>
-            <input type="password" id="password" placeholder="Password" required>
-            <button type="submit">Login</button>
-        </form>
-        <p id="message"></p>
+    
+        <a href="https://www.instagram.com/coder.142?igsh=MWY4cXljY3hqcWU5Yw=="> <img  class="logo"src=" https://i.imgur.com/ibTresR.jpeg"></a>
+<br>
+
+    <div class="container" id="signup-container">
+        <h2>Sign Up</h2>
+        <input type="text" id="signup-username" placeholder="Choose a Username" required>
+        <input type="password" id="signup-password" placeholder="Choose a Password" required>
+        <div class="show-password">
+            <input type="checkbox" id="show-signup-password" onclick="togglePassword('signup-password')"> Show Password
+        </div>
+        <button onclick="signup()">Sign Up</button>
+        <p id="signup-message"></p>
+        <span class="switch" onclick="showLogin()">Already have an account? Login</span>
     </div>
+
+    
+    <div class="container" id="login-container" style="display:none;">
+        <h2>Login</h2>
+        <input type="text" id="login-username" placeholder="Username" required>
+        <input type="password" id="login-password" placeholder="Password" required>
+        <div class="show-password">
+            <input type="checkbox" id="show-login-password" onclick="togglePassword('login-password')"> Show Password
+        </div>
+        <button onclick="login()">Login</button>
+        <p id="error-message"></p>
+        <span class="switch" onclick="showSignup()">Don't have an account? Sign up</span>
+    </div>
+
+
+    <div id="dashboard">
+        <h1>Welcome, <span id="user-name"></span>!</h1>
+        <p>You have successfully logged in.</p>
+        <a href="https://darshan-m-sys.github.io/New--website/history.html"><button>Learn Code</button></a>
+        <br>
+        <br>
+        <br>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <script>
+        function signup() {
+            let username = document.getElementById("signup-username").value.trim();
+            let password = document.getElementById("signup-password").value.trim();
+            let message = document.getElementById("signup-message");
+
+            if (username === "" || password === "") {
+                message.textContent = "Username and Password cannot be empty!";
+                message.style.color = "red";
+                return;
+            }
+
+        
+            localStorage.setItem("username", username);
+            localStorage.setItem("password", password);
+
+            message.textContent = "Account created successfully! You can now log in.";
+            message.style.color = "green";
+            setTimeout(() => showLogin(), 1500); // Redirect to login after signup
+        }
+
+        function login() {
+            let username = document.getElementById("login-username").value.trim();
+            let password = document.getElementById("login-password").value.trim();
+            let errorMessage = document.getElementById("error-message");
+
+    
+            let storedUsername = localStorage.getItem("username");
+            let storedPassword = localStorage.getItem("password");
+
+            if (username === storedUsername && password === storedPassword) {
+                document.getElementById("login-container").style.display = "none";
+                document.getElementById("dashboard").style.display = "block";
+                document.getElementById("user-name").textContent = username;
+            } else {
+                errorMessage.textContent = "Invalid username or password!";
+            }
+        }
+
+        function logout() {
+            document.getElementById("dashboard").style.display = "none";
+            document.getElementById("login-container").style.display = "block";
+        }
+
+        function showLogin() {
+            document.getElementById("signup-container").style.display = "none";
+            document.getElementById("login-container").style.display = "block";
+        }
+
+        function showSignup() {
+            document.getElementById("login-container").style.display = "none";
+            document.getElementById("signup-container").style.display = "block";
+        }
+
+        function togglePassword(fieldId) {
+            let passwordField = document.getElementById(fieldId);
+            passwordField.type = passwordField.type === "password" ? "text" : "password";
+        }
+    </script>
+
 </body>
 </html>
