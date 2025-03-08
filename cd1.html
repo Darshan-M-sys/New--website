@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Bar with Menu Items</title>
+    <style>
+        html {
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+        }
+
+        body{
+          min-height: 100%;
+          position: relative;
+          padding-bottom: 3rem;
+          margin: 0;
+          padding: 0;
+          text-align: center;
+          width: 100%;
+          background: linear-gradient(170deg, rgba(49, 57, 73, 0.8) 20%, rgba(49, 57, 73, 0.5) 20%, rgba(49, 57, 73, 0.5) 35%, rgba(41, 48, 61, 0.6) 35%, rgba(41, 48, 61, 0.8) 45%, rgba(31, 36, 46, 0.5) 45%, rgba(31, 36, 46, 0.8) 75%, rgba(49, 57, 73, 0.5) 75%), linear-gradient(45deg, rgba(20, 24, 31, 0.8) 0%, rgba(4, 247, 150, 0.8) 50%, rgba(82, 95, 122, 0.8) 50%, rgba(133, 146, 173, 0.8) 100%) #313949;
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        
+        .search-container {
+            width:400px;
+            border-radius:12px;
+
+        }
+        
+        .search-container {
+            width: 500px;
+            margin-top:20px;
+
+            background:rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .search-container input {
+            width: 50%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            margin-right: 150px;
+            margin-left: 1px;
+            
+            box-shadow: 0 0 10px red;
+            animation: laserMove 1s linear infinite;
+        }
+
+        @keyframes laserMove {
+            0% {
+                box-shadow: inset 0px 0px 5px rgb(0, 17, 255), 0 0 2px rgb(35, 222, 14);
+            }
+            25% {
+                box-shadow: inset 5px 0px 5px rgb(0, 213, 255), 0 0 5px red;
+            }
+            50% {
+                box-shadow: inset 0px 1px 5px red, 0 0 10px rgb(168, 219, 16);
+            }
+            75% {
+                box-shadow: inset -5px 0px 10px rgb(163, 225, 8), 0 0 10px rgb(27, 221, 78);
+            }
+            100% {
+                box-shadow: inset 0px -5px 10px red, 0 0 5px red;
+            }
+        }
+
+        
+        .search-results {
+            position: absolute;
+            width: 50%;
+            left: 25%;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: none;
+            max-height: 200px;
+            overflow-y: auto;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-results div {
+            padding: 10px;
+            cursor: pointer;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .search-results div:hover {
+            background: #f0f0f0;
+        }
+
+    
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background: #222;
+            color: white;
+            position: fixed;
+            top: 0;
+            left: -250px; 
+            overflow-y: auto;
+            transition: left 0.3s ease-in-out;
+            padding-top: 50px;
+        }
+        .welcome{
+            width:100px;
+            height:50px;
+            font-size:70px;
+            border-radius: 25%;
+color:cyan;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-weight: bold;
+font-variant: small-caps;
+font-style: italic;
+        }
+
+        
+        .menu-button {
+            font-size: 30px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            position: fixed;
+            top: 20px;
+            left: 10px;
+            z-index: 1000;
+            color: white;
+            background: #222;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        
+        .content {
+            margin-top: 80px;
+            padding: 20px;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 70%;
+        }
+
+        .sidebar ul li {
+            padding: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+
+        .sidebar ul li a:hover {
+            background: #575757;
+            border-radius: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div calss="welcome">
+     <p class="welcome">  WELCOME TO  PYTHON CODING WORLD</p>
+
+    </div>
+
+    <div class="search-container">
+        <input type="text" id="searchBar" placeholder="🔎Search Content..." onkeyup="filterMenu()">
+        <div class="search-results" id="searchResults"></div>
+    </div>
+
+    
+    <button class="menu-button" onclick="toggleSidebar()">☰</button>
+
+
+
+    <div class="sidebar" id="sidebar">
+
+        <ul id="menuItems">
+            <ul>
+                <li><a href="http://darshan-m-sys.github.io/New--website/introduction.html">Introdution to Python</a></li>
+                <li><a href="http://darshan-m-sys.github.io/New--website/history.html">History</a></li>
+                <li><a href="http://darshan-m-sys.github.io/New--website/features.html">Features</a></li>
+                <li><a href="http://darshan-m-sys.github.io/New--website/install.html">Install</a></li>
+                
+                <li><a href="http://darshan-m-sys.github.io/New--website/tokens.html">Tokens</a></li>
+                <li><a href="http://darshan-m-sys.github.io/New--website/identifiers.html">Identifiers</a></li>
+                <li><a href="http://darshan-m-sys.github.io/New--website/keywords.html">Keywords</a></li>
+                <li><a href="http://darshan-m-sys.github.io/New--website/literals.html">Literals</a></li>
+                
+                <li><a href="http://darshan-m-sys.github.io/New--website/punctuators.html">Punctuators</a></li>
+                <li><a href="http://darshan-m-sys.github.io/New--website/operators.html">Operators</a></li>
+                <li><a href="http://darshan-m-sys.github.io/New--website/variables.html">Variables</a></li>
+                <li><a href="http://darshan-m-sys.github.io/New--website/indentation.html">Indentation</a></li>
+                <li><a href="http://darshan-m-sys.github.io/New--website/datatypes.html">Datatypes</a></li>
+                <li><a href="http://darshan-m-sys.github.io/New--website/expressions.html">Expressions</a></li>
+                <li><a href="http://darshan-m-sys.github.io/New--website/statements.html">statements</a></li>
+                <li><a href="http://darshan-m-sys.github.io/New--website/comments.html">Comments</a></li>
+                <li><a href="http://darshan-m-sys.github.io/New--website/built-in function.html">Built-In-Functions</a></li>
+                <li><a href="http://darshan-m-sys.github.io/New--website/string forming.html">String Formating</a></li>
+                <li><a href="http://darshan-m-sys.github.io/New--website/modules.html">Python Modules</a></li>
+                
+                <li><a href="http://darshan-m-sys.github.io/New--website/libraries.html">Python Libraries</a></li>
+                <li><a href="http://darshan-m-sys.github.io/New--website/control statements.html">Python  Control Flow statements</a></li>
+                <li><a href="http://darshan-m-sys.github.io/New--website/if statements.html">If Statements</a></li>
+                <li><a href="http://darshan-m-sys.github.io/New--website/loops.html">Loop Statements</a></li>
+                
+                <li><a href="http://darshan-m-sys.github.io/New--website/jump statements.html">Jump Statements</a></li>
+                <li><a href="http://darshan-m-sys.github.io/New--website/error.html">Errors in Python</a></li>
+                <li><a href="http://darshan-m-sys.github.io/New--website/funtion.html">Functions in Python</a></li>
+            </ul>
+        </div>
+    
+</div> 
+    <script>
+        let isSidebarOpen = false; 
+
+        function toggleSidebar() {
+            let sidebar = document.getElementById("sidebar");
+            
+            if (isSidebarOpen) {
+                sidebar.style.left = "-250px"; 
+            } else {
+                sidebar.style.left = "0px"; 
+            }
+
+            isSidebarOpen = !isSidebarOpen; 
+        }
+
+        
+        let menuItems = document.querySelectorAll("#menuItems li a");
+        let searchResults = document.getElementById("searchResults");
+
+        function filterMenu() {
+            let input = document.getElementById("searchBar").value.toLowerCase();
+            searchResults.innerHTML = ""; 
+
+            if (input.length === 0) {
+                searchResults.style.display = "none";
+                return;
+            }
+
+            let matchFound = false;
+
+            menuItems.forEach(item => {
+                let itemText = item.textContent.toLowerCase();
+
+                if (itemText.includes(input)) {
+                    let resultItem = document.createElement("div");
+                    resultItem.textContent = item.textContent;
+                    resultItem.onclick = function() {
+                        window.location.href = item.href; 
+                    };
+                    searchResults.appendChild(resultItem);
+                    matchFound = true;
+                }
+            });
+
+            searchResults.style.display = matchFound ? "block" : "none";
+        }
+
+    
+        document.addEventListener("click", function(event) {
+            if (!document.getElementById("searchBar").contains(event.target)) {
+                searchResults.style.display = "none";
+            }
+        });
+    </script>
+
+</body>
+</html>
