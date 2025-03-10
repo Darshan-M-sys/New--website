@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style> 
+        /* General Styling */
+        html {
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        body{
+          min-height: 100%;
+          position: relative;
+          padding-bottom: 3rem;
+          margin: 0;
+          padding: 0;
+text-align: center;
+color:white;
+          width: 100%;
+          background: linear-gradient(170deg, rgba(88, 95, 94, 0.8) 20%, rgba(49, 57, 73, 0.5) 15%, rgba(14, 86, 231, 0.5) 36%, rgba(221, 24, 24, 0.6) 35%, rgba(41, 48, 61, 0.8) 45%, rgba(12, 85, 233, 0.5) 45%, rgba(31, 36, 46, 0.8) 75%, rgba(49, 57, 73, 0.5) 75%), linear-gradient(45deg, rgba(20, 24, 31, 0.8) 0%, rgba(4, 247, 150, 0.8) 50%, rgba(82, 95, 122, 0.8) 50%, rgba(133, 146, 173, 0.8) 100%) #115bf0;
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        /* Header and Navigation */
+        header {
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            width: 100%;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: cyan;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        h3 {
+            font-size: 18px;
+        }
+
+        h1 {
+            font-size: 22px;
+            color:cyan
+        }
+
+        h2 {
+            font-size: 16px;
+            margin-top: 5px;
+        }
+
+        h2 .typing {
+            color: cyan;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 14px;
+            margin-top: 5px;
+            max-width: 80%;
+        }
+
+        /* Profile Image with Animated Borders */
+        .image-container {
+            position: relative;
+            display: inline-block;
+            margin-top: 25px;
+            background-color:rgb(255,255,255,0.1);
+            backdrop-filter: blur(200px);
+            border-radius: 50%;
+        }
+
+        .profile-img {
+            border:3px solid rgb(255,255,255,0.1);
+            width: 150px;
+            
+            height: 150px;
+            margin-top: 5px;
+            border-radius: 50%;
+            box-shadow: 0 0 30px cyan;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Border Animation with Before & After Elements */
+        .image-container::before,
+        .image-container::after {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: -3px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid transparent;
+            border-width: 5px;
+            animation: rotateBorder 3s linear infinite;
+        }
+
+        .image-container::before {
+            border-top: 5px solid rgb(238, 10, 10);
+            border-bottom: 5px solid cyan;
+
+        }
+
+
+        @keyframes rotateBorder {
+            
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Social Media Icons */
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .social-links img {
+            width: 30px;
+            transition: transform 0.3s;
+        }
+
+        .social-links img:hover {
+            transform: scale(1.2);
+        }
+
+        /* Read Me Button */
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: cyan;
+            color: black;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #00ffaa;
+        }
+        
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><img class="logo" src="https://i.imgur.com/ibTresR.jpeg" alt="Logo"></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Company</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Profile Image with Animated Border -->
+<div class="image-container">
+    <img class="profile-img" src="https://i.imgur.com/leLU1HZ.png" alt="Darshan">
+</div>
+
+<!-- Hero Section -->
+<section class="hero">
+    <h3>Hi, Myself</h3>
+    <h1><span>Darshan M</span></h1>
+    <h2> I'm a <span class="typing"></span></h2>
+    <p>"Unlock your potential—learn, grow, and master new skills with us!"</p>
+
+    <!-- Social Media Links -->
+    <div class="social-links">
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384053.png" alt="Facebook"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/3955/3955024.png" alt="Instagram"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384014.png" alt="LinkedIn"></a>
+        <a href="https://github.com/Darshan-M-sys/New--website"><img  class="git"src="https://cdn-icons-png.flaticon.com/512/733/733609.png" alt="LinkedIn"></a>
+    </div>
+
+    <a href="https://darshan-m-sys.github.io/New--website/login.html" class="btn">Login To Learn Python Code</a>
+</section>
+
+<script>
+    const words = ["Frontend Developer", "Web Designer", "Web Developer"];
+    let i = 0;
+    let j = 0;
+    let currentWord = "";
+    let isDeleting = false;
+    const typingElement = document.querySelector(".typing");
+
+    function typeEffect() {
+        currentWord = words[i];
+        if (isDeleting) {
+            typingElement.textContent = currentWord.substring(0, j--);
+            if (j < 0) {
+                isDeleting = false;
+                i = (i + 1) % words.length;
+            }
+        } else {
+            typingElement.textContent = currentWord.substring(0, j++);
+            if (j === currentWord.length + 1) {
+                isDeleting = true;
+                setTimeout(typeEffect, 1000);
+                return;
+            }
+        }
+        setTimeout(typeEffect, isDeleting ? 50 : 100);
+    }
+
+    document.addEventListener("DOMContentLoaded", typeEffect);
+</script>
+
+</body>
+</html>
