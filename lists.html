@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+body{
+          min-height: 100%;
+          position: relative;
+          padding-bottom: 3rem;
+          margin: 0;
+          padding: 0;
+
+          width: 100%;
+          background: linear-gradient(170deg, rgba(49, 57, 73, 0.8) 20%, rgba(49, 57, 73, 0.5) 20%, rgba(49, 57, 73, 0.5) 35%, rgba(41, 48, 61, 0.6) 35%, rgba(41, 48, 61, 0.8) 45%, rgba(31, 36, 46, 0.5) 45%, rgba(31, 36, 46, 0.8) 75%, rgba(49, 57, 73, 0.5) 75%), linear-gradient(45deg, rgba(20, 24, 31, 0.8) 0%, rgba(4, 247, 150, 0.8) 50%, rgba(82, 95, 122, 0.8) 50%, rgba(133, 146, 173, 0.8) 100%) #313949;
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        
+
+.button{
+
+position:absolute;
+
+margin-left:5px;
+margin-top:75px;
+width:85px;
+height:30px;
+font-size: 20px;
+border-radius:8px;
+background:#e0e2e1;
+background-repeat:repeat; 
+}
+button:hover{
+animation: pulse 1.5s infinite;
+}
+@keyframes pulse{
+0%,100%{
+ transform: scale(1);
+}
+50%{
+ transform: scale(1.1);
+}
+
+}
+ol{
+    color:rgb(243, 13, 247)
+}
+ p{
+     color:white;
+     margin-left:10px ;
+     margin-right: 10px;
+     background: black;
+     border-radius: 20px;
+ }
+ h1{
+     color:rgb(42, 126, 165);
+     -webkit-text-stroke: 0.6px rgb(11, 238, 136);
+     margin-left:10px ;
+     margin-right: 10px; 
+ }
+ .top{
+     width:100%;
+     height:100px; 
+     background-image:url("https://i.imgur.com/Xmvuv4L.jpeg") ;
+     background-repeat: no-repeat;
+     background-size: cover;
+     border-radius: 20px;
+ }
+ 
+.back{
+margin-left:10px;
+height:30px;
+
+background:hsl(65, 99%, 53%);
+border-radius: 6px;
+}
+hr{
+color:black;
+}
+.next{
+border-radius: 5px;
+margin:0 10px 20px 50%;
+height:30px;
+background:hsl(68, 99%, 53%);
+}
+.completed{ 
+height:30px;
+background:rgb(0, 251, 255);
+width:110px;
+margin: 0 100px 20px 110px;
+border-radius: 6px;
+}
+.more{
+
+width:50px;
+height:30px;
+border-radius: 6px;
+background: rgb(0, 238, 255);
+margin-left:250px;
+}
+.features{
+
+margin-right:10px;
+font-size: 30px;
+text-align: end;
+color:rgba(4, 255, 0, 0.679);
+-webkit-text-stroke: 1px black;;
+animation: chenge  2s linear infinite;
+}
+@keyframes chenge{
+0%,100%{
+ color:rgb(194, 123, 188);
+}
+50%{
+ color:rgb(238, 235, 227)
+}
+}
+.logo{
+position:absolute;
+width:50px;
+height:50px;
+margin-left:10px;
+margin-top: 10px;
+
+filter:drop-shadow(20px 20px 20px transparent);
+border-radius: 20px;
+}
+h2{
+    color:blue;
+}
+
+
+.icon{
+
+    
+    background-image: url("https://i.imgur.com/duuvvTR.png");
+    background-repeat: no-repeat;
+    
+}
+table{
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color :white;
+    background-color: rgba(255, 228, 196, 0.579);
+}
+</style>
+
+ 
+</head>
+<body>
+        
+    <div class="top">
+        <a href="https://www.instagram.com/coder.142?igsh=MWY4cXljY3hqcWU5Yw=="> <img  class="logo"src=" https://i.imgur.com/ibTresR.jpeg"></a>
+        <button class="button">HOME</button>
+        <h2 class="features">Welcome To <br>Lists</h2>
+
+    </div><hr>
+    <h1> Lists In Python</h1>
+    <p> THe List In a python it store a collection  of value of multiple type. and the list contains the collection of value stored in the single variable. then we access that variable in the python code . The list contains the heterogenous typed values. The values is called list elements and items in the python. list  is allows  a you to store the collection of value of any type  it make python pawer full tool. some list Importance in the below</p>
+    <h1> Importance Of Python List</h1>
+    <p> As we saw in string  the list is similar to string  but some rules and python list syntax is different</p>
+    <P> The List Is a ordered and mutable collection of data .</P>
+    <P> The list Contain the  collection of elements in different types.</P>
+    <P> We accessing that list value by using one technique  is called Indexing</P>
+    <p> The Python list is allows a you to access the individual elements  by passing the index value</p>
+    <p> The list contain the collection of data items that is enclose within the square brackets[]  and each element is separated with commas </p>
+    <h1> Creating Python List</h1>
+    <p> We want to create a python list . by placing  the collection elements in the square brackets and separated with comma ,  The Python provide the list to store the multiple typed data in the single variable.  the list is a ordered and mutable which means  we can change the list elements after that creating by using index value </p>
+    <h2> Syntax</h2>
+    <P> Variable_name=[ value1,value2,... value-n]<br>
+    # some print code here</P>
+    <h2> Example</h2>
+    <p> my_List=[10,10.2,"hello"]<br>
+    print(my_List)</p>
+    <h2> Output</h2>
+    <p>
+        10 <br>
+        10.2<br>
+        hello<br>
+    </p>
+    <h1> Accessing List Elements</h1>
+    <p> After creating the list we must be access that list in the python code. when we want to access the items in the list we must be know the indexing . using indexing to access the elements from the list . the list first element index is 0 and the list last element index is n-1 . n is number of elements in the list.  passing the index value in this way . variable_name that is list name and slice operator that is [:] . inside the slice operator place index. Example in the below</p>
+    <h2> Example</h2>
+    <p> List=["hello", 10, 20,30,40.2]<br>
+    print(List[0:2])</p>
+    <h2> Output</h2>
+    <p> [hello ,10 ,20 ]</p>
+    <h1> Negative Indexing</h1>
+    <p> The is Another way to access the elements from the list .  negative indexing means it start from last element of list is represented by -1 and the the first element is represented by -n means the number of elements in the list . when we are using this negative indexing in the since we want to access the list elements from right to left. the Example in the below  </p>
+    <h2> Example</h2>
+    <p> list=[10,20,30,"hello","Darshan"]<br>
+    print(list[-3:-1])</p>
+    <h1> Output</h1>
+    <p> [30, 'hello']</p>
+    <h1> Difference  Between String And List</h1>
+    <table border="2">
+        <tr> 
+        <th> String</th>
+        <th> List</th>
+        </tr>
+        <tr>
+            <td> The String is a sequence of character</td>
+            <td>The List is a Sequence of different data items  or Elements </td>
+        </tr>
+        <tr> 
+            <td> The String is a Immutable which means once the string is created we cannot bew change </td>
+            <td> The List is a  mutable which means we can change the list elements  after creating a list</td>
+        </tr>
+        <tr>
+            <td>The String is accessing using index value or Indexing</td>
+            <td> The List elements also accessing using the indexing </td></tr>
+    </table>
+    <h1> List Are Mutable</h1>
+    <p> The python list is a mutable which means we can change that list element after creating a list. when we want to change the list element we must be used the index. as below example </p>
+    <p>list=[10,20,30,"hello","Darshan"]<br>
+        list[4]="Nandini"<br>
+        print(list) </p>
+        <h2> Output</h2>
+        <p> [10, 20, 30, 'hello', 'Nandini']</p>
+        <h1> Operations In Python List</h1>
+        <ol>
+            <li> Traversing</li>
+            <li> Concatenating</li>
+            <li> Membership</li>
+            <li> Comparison</li>
+            <li> Slicing</li>
+
+        </ol>
+        <h1> Traversing In Python </h1>
+        <p> The List is a iterable which means we using the for loop to print the each element in the list as sequentially .  traversing means we print the list elements in one by one . Example in the below</p>
+        <h2> Example</h2>
+        <p> list=[10,20,30,"hello","Darshan"]<br>
+            for i in list:<br>
+        &nbsp; &nbsp; &nbsp;    print(i)</p>
+        <h2> Output</h2>
+        <p>10<br>
+            20<br>
+            30<br>
+            hello<br>
+            Darshan<br>
+             </p>
+             <h1> Concatenation of list</h1>
+             <p>  Concatenating is a process of of adding the two list . and adding the new elements to the list .   by using  + operator to adding the two list to gather. syntax in the below  </p>
+             <h2> Syntax</h2>
+             <p> list=list1+list2+........+list n</p>
+             <h2> Example</h2>
+             <p>list1=[10,20,30,"hello"]
+                list2=[40,50,60,"darshan"]<br>
+                list=list1+list2<br>
+                print(list)</p>
+                <h2> Output</h2>
+                <p> [10, 20, 30, 'hello', 40, 50, 60, 'darshan']</p>
+                <h2> Adding the new element to list</h2>
+                <p> The adding the elements  by using append() or insert(index) function</p>
+                <h2> append()</h2>
+                <p>  The adding the new element to list by using append() it does not assigning index </p>
+                <h2> Example</h2>
+                <p> list1=[10,20,30,"hello"]<br>
+                    list1.append("Darshan")<br>
+                    print(list1)<br>
+                </p>
+                <h2> Output</h2>
+                <p>[10, 20, 30, 'hello', 'Darshan']</p>
+                <h2> Insert()</h2> 
+                <p> Adding the new list element by specifying the index to store the new list element as show in the below example</p>    
+    <h2> Example</h2>
+    <p>list1=[10,20,30,"hello"]<br>
+        list1.insert(3,"darshan")<br>
+        print(list1)</p>
+        <h2> Output</h2>
+        <p>[10, 20, 30, 'darshan', 'hello']</p>
+        <h2> Removing list or list element</h2>
+        <p> The removing the existing list or list element by using remove(value) function. as shown in the below example</p>
+        <h2> Example</h2>
+        <p>list1=[10,20,30,"hello"]<br>
+            list1.remove(20)<br>
+            print(list1)</p>
+            <h2> Output</h2>
+            <p>[10, 30, 'hello']</p>
+
+            or
+            <p>list1=[10,20,30,"hello"]<br>
+                del list1<br>
+                print(list1)</p>
+
+                <h1>
+                    Repetition Of Lists 
+                </h1>
+                <p> repeating the list by using the * (asterisk) operator .  we can also assign the repetition value . as shown in the below example</p>
+                <h2> Example</h2>
+                <p> list1=[10,20,30,"hello"]<br>
+
+                    print(list1*3)</p>
+                    <h2> Output</h2>
+                    <p>[10, 20, 30, 'hello', 10, 20, 30, 'hello', 10, 20, 30, 'hello']</p>
+                    <h1>
+                         Membership Operator In Lists
+                    </h1>
+    <p> The membership is used to we check the membership  of an element  from a list using membership operator That is  membership in  and membership not in . the membership operator checks the particular list element is belongs to the list or not  </p>
+    <h2> Membership in</h2>
+    <p> It Checks the particular element is belongs to list or not . if that particular element is belongs to list then the output is true other wise false</p>
+    <h4> Example</h4>
+    <p>list1=[10,20,30,"hello"]<br>
+        result=10 in list1<br>
+        print(result) </p><br>
+<h2> output</h2>
+<p>True</p>
+
+<h2> Membership  Not In </h2>
+<p> It is offsite  to membership  in
+        </p>
+        <h4> Example</h4>
+        <p>list1=[10,20,30,"hello"]<br>
+            result=10  not in list1<br>
+            print(result)</p><br>
+            <h4> Output</h4>
+            <p> False</p>
+            <h1>  Comparison of a list</h1>
+            <p> The comparison is a process of compare the two lists  and return the value . you want to learn the comparison operators please go through the operator lesson . the comparison value should be boolean value either True  OR False</p>
+            <p> Example In the Below</p>
+            <h2> EXample</h2>
+            <p>list1=[10,20,30]<br>
+                list2=[20,40,30]<br>
+                print(list1<<de> list2)<br>
+                print(list1>list2)<br>
+                print(list1==list2)<br>
+                print(list1<=list2)<br>
+                print(list1>=list2)<br>
+                print(list1!=list2)<br>
+               </p>
+               <h2> output</h2>
+               <p> 
+                True<br>
+                False<br>
+                False<br>
+                True<br>
+                False<br>
+                True</p>
+                <h1>Coping The List </h1>
+                <p> THe Coping the list is a process of assigning the list variable element to another variable as shown in the below example </p>
+                <h2> Example</h2>
+                <p> list1=[10,20,30]<br>
+                    list2=list1<br>
+                    print(list2)
+                    </p>
+                    <h2> Output</h2>
+                 <p>   [10, 20, 30] </p> 
+                 
+            </div>
+    <a href="https://darshan-m-sys.github.io/New--website/history.html"> <button class="back">◀️BACK</button></a>
+    <a href="https://darshan-m-sys.github.io/New--website/install.html"><button class="next">NEXT▶️</button></a>
+    <a href=""> <button class="completed" onclick='document.getElementById("completed").innerHTML=alert("Darshan page says 🤗Congratulation🤗 learn well all the best")'>Completed</button></a>
+    
+</body>
+</html>

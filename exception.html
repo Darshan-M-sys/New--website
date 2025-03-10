@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title><style>
+         html {
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+        }
+
+        h4{
+            color:blue;
+        }
+        body{
+        
+          width: 100%;
+          background: linear-gradient(170deg, rgba(49, 57, 73, 0.8) 20%, rgba(49, 57, 73, 0.5) 20%, rgba(49, 57, 73, 0.5) 35%, rgba(41, 48, 61, 0.6) 35%, rgba(41, 48, 61, 0.8) 45%, rgba(31, 36, 46, 0.5) 45%, rgba(31, 36, 46, 0.8) 75%, rgba(49, 57, 73, 0.5) 75%), linear-gradient(45deg, rgba(20, 24, 31, 0.8) 0%, rgba(4, 247, 150, 0.8) 50%, rgba(82, 95, 122, 0.8) 50%, rgba(133, 146, 173, 0.8) 100%) #313949;
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+ 
+.button{
+
+position:absolute;
+
+margin-left:5px;
+margin-top:75px;
+width:85px;
+height:30px;
+font-size: 20px;
+border-radius:8px;
+background:#e0e2e1;
+background-repeat:repeat; 
+}
+button:hover{
+animation: pulse 1.5s infinite;
+}
+@keyframes pulse{
+0%,100%{
+ transform: scale(1);
+}
+50%{
+ transform: scale(1.1);
+}
+
+}
+ol{
+    color:rgb(243, 13, 247)
+}
+ p{
+     color:white;
+     margin-left:10px ;
+     margin-right: 10px;
+     background: black;
+     border-radius: 20px;
+ }
+ h1{
+     color:rgb(42, 126, 165);
+     -webkit-text-stroke: 0.6px rgb(11, 238, 136);
+     margin-left:10px ;
+     margin-right: 10px; 
+ }
+ .top{
+     width:100%;
+     height:100px; 
+     background-image:url("https://i.imgur.com/Xmvuv4L.jpeg") ;
+     background-repeat: no-repeat;
+     background-size: cover;
+     border-radius: 20px;
+ }
+ 
+.back{
+margin-left:10px;
+height:30px;
+
+background:hsl(65, 99%, 53%);
+border-radius: 6px;
+}
+hr{
+color:black;
+}
+.next{
+border-radius: 5px;
+margin:0 10px 20px 50%;
+height:30px;
+background:hsl(68, 99%, 53%);
+}
+.completed{ 
+height:30px;
+background:rgb(0, 251, 255);
+width:110px;
+margin: 0 100px 20px 110px;
+border-radius: 6px;
+}
+.more{
+
+width:50px;
+height:30px;
+border-radius: 6px;
+background: rgb(0, 238, 255);
+margin-left:250px;
+}
+.features{
+
+margin-right:10px;
+font-size: 30px;
+text-align: end;
+color:rgba(4, 255, 0, 0.679);
+-webkit-text-stroke: 1px black;;
+animation: chenge  2s linear infinite;
+}
+@keyframes chenge{
+0%,100%{
+ color:rgb(194, 123, 188);
+}
+50%{
+ color:rgb(238, 235, 227)
+}
+}
+.logo{
+position:absolute;
+width:50px;
+height:50px;
+margin-left:10px;
+margin-top: 10px;
+
+filter:drop-shadow(20px 20px 20px transparent);
+border-radius: 20px;
+}
+
+
+.icon{
+
+
+    
+    background-image: url("https://i.imgur.com/duuvvTR.png");
+    background-repeat: no-repeat;
+    
+}
+h3{
+    color: blue;
+}
+h2{
+    color: rgb(15, 220, 239);
+}
+</style>
+
+ 
+</head>
+<body>
+        
+    <div class="top">
+        <a href="https://www.instagram.com/coder.142?igsh=MWY4cXljY3hqcWU5Yw=="> <img  class="logo"src=" https://i.imgur.com/ibTresR.jpeg"></a>
+        <button class="button">HOME</button>
+        <h2 class="features">Welcome To <br> Exception</h2>
+    </div><hr>
+    <div class="icon">
+    <h1> Exception In A Python</h1>
+    <p> The exception is a one type of error that occurs during the runtime . when exception occurs the normal flow of execution is gets stop. and print the error message . in python provides the exception handlers  like try and except. it prints the what type of error occurs in that particular code. and the it used to print the error message it prevent the crash of a program . </p>
+    <p> Some Reasons to occur a error that is in the below</p>
+    <ol> 
+        <li> Input error</li>
+        <li> Type error</li>
+        <li>fileNotFound error</li>
+<li> Name Error</li>
+<li> Import error</li>
+<li> Indentation Error</li>
+<li> ZeroDivisionError</li>
+<li> Index Error</li>
+<li> Key Error</li>
+<li> IO Error
+</li>
+    </ol>
+    <h1> Built In Exceptions</h1>
+    <p> The python provides the standard set of built in exception to raised the error during the run time . it prevent the code to crash a program</p>
+    <h2> NameError</h2>
+    <p> The raised exception when the no defined  variable to print the value.</p>
+    <h4> Error program</h4>
+    <p> print(myName)</p>
+    <h4> Correct program</h4>
+    <p>  myName="Darshan"<br>print(myName)</p>
+    <h1> valueError</h1>
+    <p> The Exception raised during the invalid input received. When the user to get the input value as wrong then exception raised value error
+
+    </p>
+    <h4>Error Program</h4>
+    <p> int(" hello)</p>
+    <h4> Correct program</h4>
+    <p> str("Hello')</p>
+    <h1> Type error</h1>
+    <p>The exception raised when the value that variable can store the incorrect value </p>
+    <h1>Error program</h1>
+    <p> a=hello</p>
+    <h4> Correct program</h4>
+    <p> a="hello"</p>
+    <h1> Indentation Error</h1>
+    <p> The Indentation Error exception is raised  when the python code having a incorrect indent as block of code</p>
+    
+    <h4> Error program</h4>
+    <p> For i in range(1,10):<br>
+        print(i)
+    </p>
+    <h4> Correct program</h4>
+<p> for i in range(1,10):
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(i)
+</p>
+<h1> Key error</h1>
+<p>The Error exception raised when the key is not found in the existing dictionary. </p>
+<h4> Error Program</h4>
+<p> dist={"name"="darshan",
+    "age"=19,
+    'place"="kolar"}
+    print(address)
+</p>
+
+<h4> Correct Program</h4>
+<p> dist={"name"="darshan",
+    "age"=19,
+    'place"="kolar"}
+    print(place)
+    <h1> ZeroDivisionError</h1>
+    <p>The Exception raised when we want to divide the any integer value ton zero  . the ZeroDivisionError is appear </p>
+    <h1>Error Program</h1>
+    <p> print(10/0)</p>
+    <h4> Correct program</h4>
+    <p> print(10/5)</p>
+    <h1> Index Error</h1>
+    <p>The Error Exception raised when we want to access the invalid range of index in the existing sequence type.</p>
+    <h4> Error Program</h4>
+    <p> list=[1,2,3,4]<br>
+    print(list[5])</p>
+    <h1> Correct program</h1>
+    <p> list=[1,2,3,4] <br>
+    print(list[3])</p>
+    <h1>IO Error </h1>
+    <p> The python raised the error Exception when the file is not working properly or not found</p>
+    <h1> Import Error</h1>
+    <p>The error exception raised when the module name is wrong then the import cannot be work properly.</p>
+    <h1> Exception Handling </h1>
+    <p>Exception handling is a process or mechanism  to handle the error may occur during the runtime . the exception make the program to execute continuously . and when the error occur it shows the informative of  that particular error type . </p>
+    <h1> Needs  of Exception Handling</h1>
+    <p> 
+        •	Preventing crashes <br>
+•	Provide the informative  about error<br>
+•	Continue for execution <br>
+•	Handing external conditions <br>
+
+    </p>
+    <h1> Exception Handling Using Try and Except </h1>
+    <p> The Exception handling try and Except is a keywords to gather  and raised the exception if error may occurs.<br>
+    <b>Try</b> it is a keyword it contains a block of code that raises an exception.<br>
+<b> Except</b> It is also Keyword it Contains a type of exception it may occur. Small Example in the below </p>
+<h1>Syntax</h1>
+<p>try: <br>
+    &nbsp;&nbsp;&nbsp;# code for exception raised.<br>
+except Exceptiontype:<br>
+&nbsp;&nbsp;&nbsp; # code of Exception type</p>
+<h1> Example</h1>
+<p> Try:
+    <br>&nbsp;&nbsp;&nbsp;list=[1,2,3,]<br>
+    &nbsp;&nbsp;&nbsp; print(list[10])<br>
+    except IndexError:<br>
+    &nbsp;&nbsp;&nbsp;print("The index value does not exist")
+
+
+</p>
+<h1>Exception Handling Try,except, else and Finally </h1>
+<p> The Exception handling try and Except,else,finally is a keywords to gather  and raised the exception if error may occurs.<br>
+    <b>Try</b> it is a keyword it contains a block of code that raises an exception.<br>
+<b> Except</b> It is also Keyword it Contains a type of exception it may occur. <br>
+<b> Else</b> The else contain if error does not exist<br>
+<b> Finally</b>  It contains a This block of code always executed</p>
+<h1>Syntax</h1>
+<p>try: <br>
+    &nbsp;&nbsp;&nbsp;# code for exception raised.<br>
+except Exceptiontype:<br>
+&nbsp;&nbsp;&nbsp; # code of Exception type<br>
+else:<br>
+&nbsp;&nbsp;&nbsp;# code of exception does not exist.
+
+<h1> Example</h1>
+<p> Try:
+    <br>&nbsp;&nbsp;&nbsp;list=[1,2,3,]<br>
+    &nbsp;&nbsp;&nbsp; print(list[10])<br>
+    except IndexError:<br>
+    &nbsp;&nbsp;&nbsp;print("The index value does not exist")<br>
+    else:<br>
+    &nbsp;&nbsp;&nbsp;print("The code can execute with correct index")
+</p>
+<h1> Exception handling Using Try,Except, Else and Finally</h1>
+
+<p> The Exception handling try and Except is a keywords to gather  and raised the exception if error may occurs.<br>
+    <b>Try</b> it is a keyword it contains a block of code that raises an exception.<br>
+<b> Except</b> It is also Keyword it Contains a type of exception it may occur. <br>
+<b> Else</b> The else contain if error does not exist</p>
+<h1>Syntax</h1>
+<p>try: <br>
+    &nbsp;&nbsp;&nbsp;# code for exception raised.<br>
+except Exceptiontype:<br>
+&nbsp;&nbsp;&nbsp; # code of Exception type<br>
+else:<br>
+&nbsp;&nbsp;&nbsp;# code of exception does not exist.<br>
+finally:<br>
+&nbsp;&nbsp;&nbsp;# the Code contain the block of code is always executed</p>
+
+
+
+<h1> Example</h1>
+<p> Try:
+    <br>&nbsp;&nbsp;&nbsp;list=[1,2,3,]<br>
+    &nbsp;&nbsp;&nbsp; print(list[10])<br>
+    except IndexError:<br>
+    &nbsp;&nbsp;&nbsp;print("The index value does not exist")<br>
+    else:<br>
+    &nbsp;&nbsp;&nbsp;print("The code can execute with correct index")<br>
+    finally:<br>
+    &nbsp;&nbsp;&nbsp;print("The statement is always executed")
+
+
+</p>
+<h1> Raising Exception -- raise statement</h1>
+<p>  The Raise is a keyword it is used to raise the exception manually</p>
+<h1> Syntax</h1>
+<p> raise Exceptiontype("error message")</p>
+<h1> Example</h1>
+<p> try:<br>
+    &nbsp;&nbsp;&nbsp;age=int(input('Enter your age'))<br>
+    &nbsp;&nbsp;&nbsp;if age<=0:<br>
+    &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;raise ValueError("Age cannot be less Then 0")
+    <br>  &nbsp;&nbsp;&nbsp; print(f'your age is{age}')<br>
+    except ValueError as e:
+    &nbsp;&nbsp;&nbsp;print(e)
+
+</div>
+<a href="https://darshan-m-sys.github.io/New--website/history.html"> <button class="back">◀️BACK</button></a>
+<a href="https://darshan-m-sys.github.io/New--website/install.html"><button class="next">NEXT▶️</button></a>
+<a href=""> <button class="completed" onclick='document.getElementById("completed").innerHTML=alert("Darshan page says 🤗Congratulation🤗 learn well all the best")'>Completed</button></a>
+
+
+</p>
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Darshan M</title>
+    <style> 
+        /* Reset Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            min-height: 100%;
+            text-align: center;
+            background-image: url("https://th.bing.com/th/id/OIP.2HIX184r17IvA1VRuXdtbAHaFL?rs=1&pid=ImgDetMain");
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        /* Header Styles */
+        header {
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            width: 100%;
+            height: 50px;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 5px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: cyan;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 50px;
+            padding: 20px;
+        }
+
+        h3 {
+            font-size: 18px;
+        }
+
+        h1 span {
+            color: cyan;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        h2 {
+            font-size: 18px;
+            margin-top: 5px;
+        }
+
+        h2 .typing {
+            color: cyan;
+            font-weight: bold;
+        }
+
+        p {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        /* Social Links */
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        .social-links img {
+            width: 30px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .social-links img:hover {
+            transform: scale(1.2);
+        }
+
+        /* Button */
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: cyan;
+            color: #000;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #00ffaa;
+        }
+
+        /* Profile Image with Rotating Border */
+        .image-container {
+            position: relative;
+            display: inline-block;
+            margin-top: 30px;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            box-shadow: 0 0 15px cyan;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .border-animation {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            border: 5px solid transparent;
+            border-top: 5px solid cyan;
+            border-right: 5px solid cyan;
+            animation: rotateBorder 2s linear infinite;
+        }
+
+        /* Keyframe Animation for Rotating Border */
+        @keyframes rotateBorder {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <img class="logo" src="https://i.imgur.com/ibTresR.jpeg" alt="Logo">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Company</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Profile Image with Rotating Border -->
+    <div class="image-container">
+        <div class="border-animation"></div>
+        <img class="profile-img" src="https://via.placeholder.com/150" alt="Darshan">
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h3>Hi, Myself</h3>
+        <h1><span>Darshan M</span></h1>
+        <h2> I'm a <span class="typing"></span></h2>
+        <p>"Unlock your potential—learn, grow, and master new skills with us!"</p>
+
+        <div class="social-links">
+            <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/3955/3955024.png" alt="Instagram"></a>
+            <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg" alt="LinkedIn"></a>
+        </div>
+
+        <a href="#" class="btn">Read Me</a>
+    </section>
+
+    <!-- JavaScript for Typing Effect -->
+    <script>
+        const words = ["Frontend Developer", "Web Designer", "Web Developer"];
+        let i = 0;
+        let j = 0;
+        let currentWord = "";
+        let isDeleting = false;
+        const typingElement = document.querySelector(".typing");
+
+        function typeEffect() {
+            currentWord = words[i];
+            if (isDeleting) {
+                typingElement.textContent = currentWord.substring(0, j--);
+                if (j < 0) {
+                    isDeleting = false;
+                    i = (i + 1) % words.length;
+                    setTimeout(typeEffect, 500); // Delay before typing next word
+                    return;
+                }
+            } else {
+                typingElement.textContent = currentWord.substring(0, j++);
+                if (j === currentWord.length + 1) {
+                    isDeleting = true;
+                    setTimeout(typeEffect, 1000);
+                    return;
+                }
+            }
+            setTimeout(typeEffect, isDeleting ? 50 : 100);
+        }
+
+        document.addEventListener("DOMContentLoaded", typeEffect);
+    </script>
+
+</body>
+</html>

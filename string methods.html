@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+      body{
+        min-height: 100%;
+        position: relative;
+        padding-bottom: 3rem;
+        margin: 0;
+        padding: 0;
+
+        width: 100%;
+        background: linear-gradient(170deg, rgba(49, 57, 73, 0.8) 20%, rgba(49, 57, 73, 0.5) 20%, rgba(49, 57, 73, 0.5) 35%, rgba(41, 48, 61, 0.6) 35%, rgba(41, 48, 61, 0.8) 45%, rgba(31, 36, 46, 0.5) 45%, rgba(31, 36, 46, 0.8) 75%, rgba(49, 57, 73, 0.5) 75%), linear-gradient(45deg, rgba(20, 24, 31, 0.8) 0%, rgba(4, 247, 150, 0.8) 50%, rgba(82, 95, 122, 0.8) 50%, rgba(133, 146, 173, 0.8) 100%) #313949;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+      
+
+.button{
+
+position:absolute;
+
+margin-left:5px;
+margin-top:75px;
+width:85px;
+height:30px;
+font-size: 20px;
+border-radius:8px;
+background:#e0e2e1;
+background-repeat:repeat; 
+}
+button:hover{
+animation: pulse 1.5s infinite;
+}
+@keyframes pulse{
+0%,100%{
+transform: scale(1);
+}
+50%{
+transform: scale(1.1);
+}
+
+}
+ol{
+  color:rgb(243, 13, 247)
+}
+p{
+   color:white;
+   margin-left:10px ;
+   margin-right: 10px;
+   background: black;
+   border-radius: 20px;
+}
+h1{
+   color:rgb(42, 126, 165);
+   -webkit-text-stroke: 0.6px rgb(11, 238, 136);
+   margin-left:10px ;
+   margin-right: 10px; 
+}
+.top{
+   width:100%;
+   height:100px; 
+   background-image:url("https://i.imgur.com/Xmvuv4L.jpeg") ;
+   background-repeat: no-repeat;
+   background-size: cover;
+   border-radius: 20px;
+}
+
+.back{
+margin-left:10px;
+height:30px;
+
+background:hsl(65, 99%, 53%);
+border-radius: 6px;
+}
+hr{
+color:black;
+}
+.next{
+border-radius: 5px;
+margin:0 10px 20px 50%;
+height:30px;
+background:hsl(68, 99%, 53%);
+}
+.completed{ 
+height:30px;
+background:rgb(0, 251, 255);
+width:110px;
+margin: 0 100px 20px 110px;
+border-radius: 6px;
+}
+.more{
+
+width:50px;
+height:30px;
+border-radius: 6px;
+background: rgb(0, 238, 255);
+margin-left:250px;
+}
+.features{
+
+margin-right:10px;
+font-size: 30px;
+text-align: end;
+color:rgba(4, 255, 0, 0.679);
+-webkit-text-stroke: 1px black;;
+animation: chenge  2s linear infinite;
+}
+@keyframes chenge{
+0%,100%{
+color:rgb(194, 123, 188);
+}
+50%{
+color:rgb(238, 235, 227)
+}
+}
+.logo{
+position:absolute;
+width:50px;
+height:50px;
+margin-left:10px;
+margin-top: 10px;
+
+filter:drop-shadow(20px 20px 20px transparent);
+border-radius: 20px;
+}
+h2{
+  color:blue;
+}
+table{
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color :white;
+
+
+
+.icon{
+
+
+  
+  background-image: url("https://i.imgur.com/duuvvTR.png");
+  background-repeat: no-repeat;
+  
+}
+</style>
+
+
+</head>
+<body>
+      
+  <div class="top">
+      <a href="https://www.instagram.com/coder.142?igsh=MWY4cXljY3hqcWU5Yw=="> <img  class="logo"src=" https://i.imgur.com/ibTresR.jpeg"></a>
+      <button class="button">HOME</button>
+      <h2 class="features">Welcome To <br>Strings<br> Methods</h2>
+
+  </div><hr>
+    <h1> String Methods In Python</h1>
+<p> The python provides the multiple String methods to perform a text related works in the python code that is in the below. </p>
+  <table border="2">
+    <tr> 
+        <th> Methods</th>
+        <th> meaning</th>
+        <th> Example</th>
+        <th> Output</th>
+
+    </tr>
+    <tr>
+      <td> upper() </td>
+      <td>  The upper function is convert the all string characters  into Upper case .</td>
+      <td>text="Dashan"<br>
+      print(text.upper())
+    <td> DARSHAN</td>
+      </tr>
+      <tr>
+        <td>lower () </td>
+        <td>  The lower function is convert the all string characters  into Lower case .</td>
+        <td>text="DARSHAN"<br>
+        print(text.upper())
+      <td> darshan</td>
+        </tr>
+
+        <tr>
+          <td>swapcase() </td>
+          <td> The swapcase function is convert the string individual characters are upper then that converts into lower case . if the string  characters are lower case then converts that into lower case </td>
+          <td>text="Darshan"<br>
+          print(text.swapcase())
+        <td> dARSHAN</td>
+          </tr>
+          <tr>
+            <td> islower() </td>
+            <td>  The   islower() function is  checks the give string is lower case or not . if the give string is lower case then the result will be true other wise false</td>
+            <td>text="darshan"<br>
+            print(text.islower())
+          <td> True</td>
+            </tr>
+            
+          <tr>
+            <td> isupper() </td>
+            <td>  The   isupper() function is  checks the give string is upper case or not . if the give string is upper case then the result will be true other wise false</td>
+            <td>text="DARSHAN"<br>
+            print(text.isupper())
+          <td> True</td>
+            </tr>
+            
+          <tr>
+            <td> isspace() </td>
+            <td>  The assigned variable is space are not  if the variable has space then the value is true otherwise false </td>
+            <td>text=" "
+            print(text.isspace())
+          <td> True</td>
+            </tr>
+
+            <tr>
+              <td> strip() </td>
+              <td>   The  strip() function is remove the leading and trailing white  spaces in the string </td>
+              <td>text=" darshan "<br>
+              print(text.strip())
+            <td>darshan</td>
+              </tr>
+
+              <tr>
+                <td> lstrip() </td>
+                <td>   The  lstrip() function is remove the leading  white spaces in the string </td>
+                <td>text=" darshan "<br>
+                print(text.lstrip())
+              <td> darshan</td>
+                </tr>
+                
+            <tr>
+              <td> rstrip() </td>
+              <td>   The  rstrip() function is remove the  trailing  white spaces in the string </td>
+              <td>text=" darshan  "<br>
+              print(text.strip())
+            <td>darshan</td>
+              </tr>
+
+              <tr>
+                <td> find(sub) </td>
+                <td>   The find( sub) function is  used to  search the sub string from the assigned string .  it returns  the index value  </td>
+                <td>text="darshan coder "<br>
+                print(text.find("Coder"))
+              <td>8</td>
+                </tr>
+
+                
+              <tr>
+                <td> index(sub) </td>
+                <td>   The index( sub) function is  used to  search the sub string from the assigned string .  and check the index value of the string . in the python code and  it returns  the index value  </td>
+                <td>text="darshan coder "<br>
+                print(text.find("e"))
+              <td>11</td>
+                </tr>
+
+
+                
+              <tr>
+                <td> count(sub) </td>
+                <td>   the count(sub) function is used to find the number of non-overlapping occurrence of the substring sub . and the value is integer </td>
+                <td>text="darshan coder "<br>
+                print(text.count("d"))
+              <td>2</td>
+                </tr>
+
+
+                
+              <tr>
+                <td> len( String) </td>
+                <td>   the  len() function is returns the length of the string . and returns the value as integer </td>
+                <td>text="darshan coder "<br>
+                print(len(text))
+              <td>13</td>
+                </tr>
+                
+
+                <tr>
+                  <td> 
+                    startswith( sub)
+                  </td>
+                  <td>   the startswith(sub) function   checks uf the string  is starts with the specified prefix . return the result is boolean value either true or false   </td>
+                  <td>text="darshan coder "<br>
+                  print(text.startswith("darshan"))
+                <td>True</td>
+                  </tr>
+
+
+                  
+                  <tr>
+                    <td> 
+                      endswith(sub)
+                    </td>
+                    <td>   the endswith(sub) function   checks uf the string  is ends with the specified postfix . return the result is boolean value either true or false   </td>
+                    <td>text="darshan coder "<br>
+                    print(text.endswith("coder"))
+                  <td>True</td>
+                    </tr>
+              
+                    
+                        
+                    <tr>
+                      <td> 
+                        isalpha()
+                      </td>
+                      <td>   the  isalpha() function is checks the given string is alphabetic like characters. if the given string  characters are alphabetic then the result will be true otherwise False. the value is boolean value either true or False  </td>
+    
+                      <td>text="darshan coder "<br>
+                      print(text.isalpha())
+                    <td>True</td>
+                      </tr>
+              
+                      <tr>
+                        <td> 
+                          isdigit()
+                        </td>
+                        <td>   the  isdigit() function is checks the given string is digit  like characters. if the given string  characters are digit then the result will be true otherwise False. the value is boolean value either true or False  </td>
+      
+                        <td>text="2345"<br>
+                        print(text.isdigit())
+                      <td>True</td>
+                        </tr>
+                        <tr>
+
+                          <td> 
+                            capitalize()
+                          </td>
+                          <td>   the  capitalize() function is  used to convert the given string of first character is must be  uppercase rest of the characters are lower case  </td>
+  
+        
+                          <td>text="darshan"<br>
+                          print(text.capitalize())
+                        <td>Darshan</td>
+                          </tr>
+                    
+                          <tr>
+
+                            <td> 
+                              title()
+                            </td>
+                            <td>   the  title() function is  used to convert the given string of  every  word first character is must be  uppercase rest of the characters are lower case  </td>
+    
+          
+                            <td>text="darshan is web developer"<br>
+                            print(text.title())
+                          <td>Darshan Is Web Developer </td>
+
+                            </tr>
+
+
+
+                            <tr>
+
+                              <td> 
+                                replace( old,new)
+                              </td>
+                              <td>   the  replace() function is used to replace the string with another string by using old string as new string ., when we replace the string by using the old string  </td>
+  
+      
+            
+                              <td>text="darshan is web developer"<br>
+                              print(text.replace("web","front end "))
+                            <td>Darshan Is front end  Developer </td>
+  
+                              </tr>
+                              <tr>
+    
+                                <td> 
+                                  split( old,new)
+                                </td>
+                                <td>   the  replace() function is used to replace the string with another string by using old string as new string ., when we replace the string by using the old string  </td>
+    
+        
+              
+                                <td>text="darshan is web developer"<br>
+                                print(text.replace("web","front end "))
+                              <td>Darshan Is front end  Developer </td>
+    
+                                </tr>
+                            
+                          
+  </table>  
+
+  </table>  
+</div>
+<a href="https://darshan-m-sys.github.io/New--website/history.html"> <button class="back">◀️BACK</button></a>
+<a href="https://darshan-m-sys.github.io/New--website/install.html"><button class="next">NEXT▶️</button></a>
+<a href=""> <button class="completed" onclick='document.getElementById("completed").innerHTML=alert("Darshan page says 🤗Congragulation🤗 learn well all the best")'>Completed</button></a>
+
+</body>
+</html>

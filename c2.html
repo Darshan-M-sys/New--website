@@ -3,195 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>darshan web page</title>
+    <title>Glowing RGB Buttons with Unique Effects</title>
     <style>
-        /* Google Font */
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
 
         body {
-            background: #000;
-            color: #fff;
-            width:500px;
-            height:500px;
-        }
-
-        header {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            padding: 20px 50px;
-            background: #111;
+            height: 100vh;
+            background-color: #111;
+            font-family: Arial, sans-serif;
         }
 
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .logo span {
-            color: cyan;
-        }
-
-nav ul {
-    list-style: none;
-    display: flex;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 10px;
-    transition: 0.3s;
-}
-
-nav ul li a:hover {
-    color: cyan;
-}
-.hero {
+        .button-container {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 80px;
-            text-align: left;
-        }
-        
-
-       
-
-        h1 span {
-            color: cyan;
-            font-size:10px;
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h2 class="logo"><img src="" alt=""><span></span></h2>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-
-        h2 {
-            font-size: 20px;
-            margin-top: 10px;
+            gap: 20px;
         }
 
-        h2 .typing {
-            color: cyan;
-            font-weight: bold;
-        }
-
-        p {
-            margin-top: 10px;
-            font-size: 16px;
-            line-height: 1.5;
-        }
-
-        .social-links {
-            margin-top: 20px;
-        }
-
-        .social-links a {
-            display: inline-block;
-            margin-right: 15px;
-        }
-
-        .social-links img {
-            width: 3px;
-        }
-
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background: cyan;
-            color: #000;
+        button {
+            position: relative;
+            padding: 15px 30px;
             font-size: 18px;
             font-weight: bold;
-            text-decoration: none;
-            border-radius: 5px;
+            text-transform: uppercase;
+            color: #121212;
+            background: black;
+            border: 3px solid #16131300;
+            border-radius: 8px;
+            cursor: pointer;
+            overflow: hidden;
             transition: 0.3s;
         }
 
-        .btn:hover {
-            background: #00ffaa;
+       
+        button::after {
+            content: "";
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            border-radius: 8px;
+            z-index: -1;
+            animation: rgbBorder1 4s linear infinite;
         }
 
-        .image img {
-            margin-left:100px;
-            width: 150px;
+       
+        .glow-button:nth-child(1)::after {
+            background: linear-gradient(45deg, rgb(255, 0, 251), rgb(248, 14, 170), rgb(235, 9, 183));
+            animation: rgbBorder1 4s linear infinite;
+        }
+
+        .glow-button:nth-child(2)::after {
+            background: linear-gradient(45deg, cyan, magenta, yellow);
+            animation: rgbBorder2 4s linear infinite;
+        }
+
+        .glow-button:nth-child(3)::after {
+            background: linear-gradient(45deg, orange, purple, pink);
+            animation: rgbBorder3 4s linear infinite;
+        }
+
+        @keyframes rgbBorder1 {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
+
+        @keyframes rgbBorder2 {
+            0% { filter: hue-rotate(120deg); }
+            100% { filter: hue-rotate(480deg); }
+        }
+
+        @keyframes rgbBorder3 {
+            0% { filter: hue-rotate(240deg); }
+            100% { filter: hue-rotate(600deg); }
+        }
+
+      
+        button::before {
+            content: "";
+            position: absolute;
+            top: var(--yp);
+            left: var(--xp);
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, rgba(230, 173, 222, 0.8), transparent);
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: opacity 0.2s ease-in-out;
             border-radius: 50%;
-            border: 5px solid cyan;
-            box-shadow: 0 0 15px cyan;
+            pointer-events: none;
         }
-    </header>
 
-    <section class="hero">
-        <div class="content">
-            <h3>Hi, Myself</h3>
-            <h1><span>Darshan</span></h1>
-            <h2>And I'm a <span class="typing"></span></h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Voluptates optio suscipit accusamus.</p>
-            <div class="social-links">
-                <a href="#"><img src="icons/facebook.png" alt="Facebook"></a>
-                <a href="#"><img src="icons/instagram.png" alt="Instagram"></a>
-                <a href="#"><img src="icons/linkedin.png" alt="LinkedIn"></a>
-            </div>
-            <a href="#" class="btn">Read Me</a>
-        </div>
-        <div class="image">
-            <img src="https://i.imgur.com/HTVGH4v.png" alt="Shraddha">
-        </div>
-    </section>
+        button:hover::before {
+            opacity: 0.9;
+        }
+
+        .glow-button:nth-child(1):hover {
+            animation: rgbShadow1 0.1s infinite alternate;
+        }
+
+        .glow-button:nth-child(2):hover {
+            animation: rgbShadow2 1.5s infinite alternate;
+        }
+
+        .glow-button:nth-child(3):hover {
+            animation: rgbShadow3 1.5s infinite alternate;
+        }
+
+        @keyframes rgbShadow1 {
+            0% { box-shadow: 0 0 10px rgb(195, 10, 176), 0 0 20px blue, 0 0 30px green; }
+            50% { box-shadow: 0 0 10px rgb(227, 12, 141), 0 0 20px green, 0 0 30px red; }
+            100% { box-shadow: 0 0 10px rgb(244, 14, 194), 0 0 20px red, 0 0 30px blue; }
+        }
+
+        @keyframes rgbShadow2 {
+            0% { box-shadow: 0 0 10px rgb(225, 7, 185), 0 0 20px magenta, 0 0 30px yellow; }
+            50% { box-shadow: 0 0 10px magenta, 0 0 20px yellow, 0 0 30px cyan; }
+            100% { box-shadow: 0 0 10px yellow, 0 0 20px cyan, 0 0 30px magenta; }
+        }
+
+        @keyframes rgbShadow3 {
+            0% { box-shadow: 0 0 10px orange, 0 0 20px purple, 0 0 30px pink; }
+            50% { box-shadow: 0 0 10px purple, 0 0 20px pink, 0 0 30px orange; }
+            100% { box-shadow: 0 0 10px pink, 0 0 20px orange, 0 0 30px purple; }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <button class="glow-button">BUTTON 1</button>
+        <button class="glow-button">BUTTON 2</button>
+        <button class="glow-button">BUTTON 3</button>
+    </div>
 
     <script>
-        const words = ["Frontend Developer", "Web Designer", "Web Doveloper"];
-        let i = 0;
-        let j = 0;
-        let currentWord = "";
-        let isDeleting = false;
-        const typingElement = document.querySelector(".typing");
-
-        function typeEffect() {
-            currentWord = words[i];
-            if (isDeleting) {
-                typingElement.textContent = currentWord.substring(0, j--);
-                if (j < 0) {
-                    isDeleting = false;
-                    i = (i + 1) % words.length;
-                }
-            } else {
-                typingElement.textContent = currentWord.substring(0, j++);
-                if (j === currentWord.length + 1) {
-                    isDeleting = true;
-                    setTimeout(typeEffect, 1000);
-                    return;
-                }
-            }
-            setTimeout(typeEffect, isDeleting ? 50 : 100);
-        }
-
-        document.addEventListener("DOMContentLoaded", typeEffect);
+        document.querySelectorAll('.glow-button').forEach(button => {
+            button.addEventListener('mousemove', function(e) {
+                const rect = this.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                this.style.setProperty('--xp', x + 'px');
+                this.style.setProperty('--yp', y + 'px');
+            });
+        });
     </script>
-
 </body>
 </html>

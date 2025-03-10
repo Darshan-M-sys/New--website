@@ -4,8 +4,156 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+
+
+body{
+          min-height: 100%;
+          position: relative;
+          padding-bottom: 3rem;
+          margin: 0;
+          padding: 0;
+
+          width: 100%;
+          background: linear-gradient(170deg, rgba(49, 57, 73, 0.8) 20%, rgba(49, 57, 73, 0.5) 20%, rgba(49, 57, 73, 0.5) 35%, rgba(41, 48, 61, 0.6) 35%, rgba(41, 48, 61, 0.8) 45%, rgba(12, 85, 233, 0.5) 45%, rgba(31, 36, 46, 0.8) 75%, rgba(49, 57, 73, 0.5) 75%), linear-gradient(45deg, rgba(20, 24, 31, 0.8) 0%, rgba(4, 247, 150, 0.8) 50%, rgba(82, 95, 122, 0.8) 50%, rgba(133, 146, 173, 0.8) 100%) #313949;
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        
+
+.button{
+
+position:absolute;
+
+margin-left:5px;
+margin-top:75px;
+width:85px;
+height:30px;
+font-size: 20px;
+border-radius:8px;
+background:#e0e2e1;
+background-repeat:repeat; 
+}
+button:hover{
+animation: pulse 1.5s infinite;
+}
+@keyframes pulse{
+0%,100%{
+ transform: scale(1);
+}
+50%{
+ transform: scale(1.1);
+}
+
+}
+ol{
+    color:rgb(243, 13, 247)
+}
+ p{
+     color:white;
+     margin-left:10px ;
+     margin-right: 10px;
+     background: black;
+     border-radius: 20px;
+ }
+ h1{
+     color:rgb(42, 126, 165);
+     -webkit-text-stroke: 0.6px rgb(11, 238, 136);
+     margin-left:10px ;
+     margin-right: 10px; 
+ }
+ .top{
+     width:100%;
+     height:100px; 
+     background-image:url("https://i.imgur.com/Xmvuv4L.jpeg") ;
+     background-repeat: no-repeat;
+     background-size: cover;
+     border-radius: 20px;
+ }
+ 
+.back{
+margin-left:10px;
+height:30px;
+
+background:hsl(65, 99%, 53%);
+border-radius: 6px;
+}
+hr{
+color:black;
+}
+.next{
+border-radius: 5px;
+margin:0 10px 20px 50%;
+height:30px;
+background:hsl(68, 99%, 53%);
+}
+.completed{ 
+height:30px;
+background:rgb(0, 251, 255);
+width:110px;
+margin: 0 100px 20px 110px;
+border-radius: 6px;
+}
+.more{
+
+width:50px;
+height:30px;
+border-radius: 6px;
+background: rgb(0, 238, 255);
+margin-left:250px;
+}
+.features{
+
+margin-right:10px;
+font-size: 30px;
+text-align: end;
+color:rgba(4, 255, 0, 0.679);
+-webkit-text-stroke: 1px black;;
+animation: chenge  2s linear infinite;
+}
+@keyframes chenge{
+0%,100%{
+ color:rgb(194, 123, 188);
+}
+50%{
+ color:rgb(238, 235, 227)
+}
+}
+.logo{
+position:absolute;
+width:50px;
+height:50px;
+margin-left:10px;
+margin-top: 10px;
+
+filter:drop-shadow(20px 20px 20px transparent);
+border-radius: 20px;
+}
+h2{
+    color:blue;
+}
+
+
+.icon{
+
+
+    
+    background-image: url("https://i.imgur.com/duuvvTR.png");
+    background-repeat: no-repeat;
+    
+}
+</style>
+
+ 
 </head>
 <body>
+        
+    <div class="top">
+        <a href="https://www.instagram.com/coder.142?igsh=MWY4cXljY3hqcWU5Yw=="> <img  class="logo"src=" https://i.imgur.com/ibTresR.jpeg"></a>
+        <button class="button">HOME</button>
+        <h2 class="features">Welcome To <br> Function</h2>
+
+    </div><hr>
+    <div class="icon">
     <h1> Jump Statements in Python</h1>
     <p> The jump statement is used to alter the flow of normal execution. and the jump statement is used to move the control  from one place to another place . which placed  in side the loop and if statements There are three types </p>
     <ol>
@@ -18,13 +166,8 @@
     <p> Purpose: Terminates the loop entirely when a specific condition is met.</p>
     <h1> Syntax</h1>
     <p> Break</p>
-    <h1> FlowChart</h1>
 
-    <svg width="500" height="500">
-    <polygon points="100,50 200,100 100,150 0,100" fill="red" transform="translate(100,60) scale(0.5)"stroke="black"/>
-    <polygon points="100,50 200,100 100,150 0,100" fill="red" transform="translate(100,150) scale(0.5)"stroke="black"/>
 
-</svg>
 <h1> Examples</h1>
 <p> 
 
@@ -38,8 +181,97 @@
         1<br>
         2<br>
     3<br>
-4 </p>
-      
+4 <br>
+<h1> Continue Statements</h1>      
+<p> The continue statement is a one type of jump statement. it skip the current loop block and continue to the next iteration. the continue statement is used  continue the next iteration in the loop. Example in the below</p>
+<h1> Example</h1>
+<p> for i in range(10):
+    <br> &nbsp;&nbsp;&nbsp; if i==3:<br>
+&nbsp;&nbsp;&nbsp;  continue<br>
+print(i)</p>
+<h1> output</h1>
+<p>0<br>
+1<br>
+2<br>
+4<br>
+5<br>
+6<br>
+7<br>
+8<br>
+9<br></p>
+<h1> Exit() statement</h1>
+<P>  The exit() statement is used to exit the part of the statement. Example in the below </P>
+<h1> Example</h1>
+<p>print(" Hello Friends how are you")<br>
+ &nbsp;&nbsp;&nbsp;exit()<br>
+print("This statement cannot be displayed") </p>
+<h1> output</h1>
+<p> Hello Friends how are you</p>
+<h1> Pass statement</h1>
+<p> The pass statement is a null statement it does not return the any value . and does not perform the action in the python program . it is only placeholder of future code . it used when the python code does not allow  you to place the empty statement in the python code thats way we are using pass keyword to execute the next statement .example in the below  </p>
+<h1>Example</h1>
+<p> for i in range(1,100):<br>
+    &nbsp; &nbsp; &nbsp; if i%2!==0:<br>
+    pass<br>
+    Else:<br>
+    &nbsp; &nbsp; &nbsp;print(f' {i}is format  multiply 2)
+</p>
+<h1> Output</h1>
+<p>
+2 is format multiply 2<br>
+4 is format multiply 2<br>
+6 is format multiply 2<br>
+8 is format multiply 2<br>
+10 is format multiply 2<br>
+12 is format multiply 2<br>
+14 is format multiply 2<br>
+16 is format multiply 2<br>
+18 is format multiply 2<br>
+20 is format multiply 2<br>
+22 is format multiply 2<br>
+24 is format multiply 2<br>
+26 is format multiply 2<br>
+28 is format multiply 2<br>
+30 is format multiply 2<br>
+32 is format multiply 2<br>
+34 is format multiply 2<br>
+36 is format multiply 2<br>
+38 is format multiply 2<br>
+40 is format multiply 2<br>
+42 is format multiply 2<br>
+44 is format multiply 2<br>
+46 is format multiply 2<br>
+48 is format multiply 2<br>
+50 is format multiply 2<br>
+52 is format multiply 2<br>
+54 is format multiply 2<br>
+56 is format multiply 2<br>
+58 is format multiply 2<br>
+60 is format multiply 2<br>
+62 is format multiply 2<br>
+64 is format multiply 2<br>
+66 is format multiply 2<br>
+68 is format multiply 2<br>
+70 is format multiply 2<br>
+72 is format multiply 2<br>
+74 is format multiply 2<br>
+76 is format multiply 2<br>
+78 is format multiply 2<br>
+80 is format multiply 2<br>
+82 is format multiply 2<br>
+84 is format multiply 2<br>
+86 is format multiply 2<br>
+88 is format multiply 2<br>
+90 is format multiply 2<br>
+92 is format multiply 2<br>
+94 is format multiply 2<br>
+96 is format multiply 2<br>
+98 is format multiply 2<br>
+<br>
+</div>
+<a href="https://darshan-m-sys.github.io/New--website/history.html"> <button class="back">◀️BACK</button></a>
+<a href="https://darshan-m-sys.github.io/New--website/install.html"><button class="next">NEXT▶️</button></a>
+<a href=""> <button class="completed" onclick='document.getElementById("completed").innerHTML=alert("Darshan page says 🤗Congragulation🤗 learn well all the best")'>Completed</button></a>
 
 </body>
 </html>
