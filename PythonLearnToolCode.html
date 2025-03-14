@@ -176,27 +176,27 @@
     <css-doodle>
         <style>
             --color: #51eaea, #fffde1, #ff9d76, #FB3569;
-            @grid: 30x1 / 100vw 100vh / #270f34;
+            @grid: 10x1 / 100vw 100vh / #270f34;
 
             :container {
-                position: fixed;
-                perspective: 30vmin;
-                --deg: @p(-180deg, 180deg);
+                
+                perspective: 20vmin;
+                --deg: @p(-90deg, 90deg);
             }
 
             :after,
             :before {
                 content: '';
                 background: @p(--color);
-                @place: @r(10%) @r(100%);
-                @size: @r(6px);
+                @place: @r(100%) @r(100%);
+                @size: @r(30px);
                 @shape: heart;
             }
 
             @place: center;
-            @size: 18vmin;
-            box-shadow: @m2(0 0 50px @p(--color));
-            background: @m100(radial-gradient(@p(--color) 50%, transparent 0) @r(-20%, 120%) @r(-20%, 100%) / 1px 1px no-repeat);
+            @size: 10vmin;
+            box-shadow: @m2(0 0 20px @p(--color));
+            background: @m40(radial-gradient(@p(--color) 50%, transparent 0) @r(-20%, 120%) @r(-20%, 100%) / 1px 1px no-repeat);
             animation: scale-up 15s linear infinite;
             animation-delay: calc(-9s / @I * @i);
 
@@ -206,7 +206,7 @@
                     opacity: 0;
                 }
                 10% { opacity: 1; }
-                95% { transform: translateZ(35vmin) rotateZ(var(--deg)); }
+                95% { transform: translateZ(15vmin) rotateZ(var(--deg)); }
             }
         </style>
     </css-doodle>
