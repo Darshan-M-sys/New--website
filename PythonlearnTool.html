@@ -147,6 +147,39 @@ color:white;
             }
         }
 
+        /* Social Media Icons */
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .social-links img {
+            width: 30px;
+            transition: transform 0.3s;
+        }
+
+        .social-links img:hover {
+            transform: scale(1.2);
+        }
+
+        /* Read Me Button */
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: cyan;
+            color: black;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
         .btn:hover {
             background: #00ffaa;
         }
@@ -178,7 +211,47 @@ color:white;
     <h1><span>Darshan M</span></h1>
     <h2> I'm a <span class="typing"></span></h2>
     <p>"Unlock your potential—learn, grow, and master new skills with us!"</p>
-e
+
+    <!-- Social Media Links -->
+    <div class="social-links">
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384053.png" alt="Facebook"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/3955/3955024.png" alt="Instagram"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384014.png" alt="LinkedIn"></a>
+        <a href="https://github.com/Darshan-M-sys/New--website"><img  class="git"src="https://cdn-icons-png.flaticon.com/512/733/733609.png" alt="LinkedIn"></a>
+    </div>
+
+    <a href="https://darshan-m-sys.github.io/New--website/login.html" class="btn">Login To Learn Python Code</a>
+</section>
+
+<script>
+    const words = ["Frontend Developer", "Web Designer", "Web Developer"];
+    let i = 0;
+    let j = 0;
+    let currentWord = "";
+    let isDeleting = false;
+    const typingElement = document.querySelector(".typing");
+
+    function typeEffect() {
+        currentWord = words[i];
+        if (isDeleting) {
+            typingElement.textContent = currentWord.substring(0, j--);
+            if (j < 0) {
+                isDeleting = false;
+                i = (i + 1) % words.length;
+            }
+        } else {
+            typingElement.textContent = currentWord.substring(0, j++);
+            if (j === currentWord.length + 1) {
+                isDeleting = true;
+                setTimeout(typeEffect, 1000);
+                return;
+            }
+        }
+        setTimeout(typeEffect, isDeleting ? 50 : 100);
+    }
+
+    document.addEventListener("DOMContentLoaded", typeEffect);
+</script>
 
 </body>
 </html>

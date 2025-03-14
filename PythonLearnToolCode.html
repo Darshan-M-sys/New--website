@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style> 
+        /* General Styling */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: #fcfbfb;
+            font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+            overflow: hidden;
+        }
+
+        /* Header and Navigation */
+        header {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            width: 100%;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: cyan;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        h3 { font-size: 18px; }
+        h1 { font-size: 22px; color: cyan;
+        -webkit-text-stroke: 1px red; }
+        h2 { font-size: 16px; margin-top: 5px; }
+        h2 .typing { color: rgb(255, 0, 21); font-weight: bold;
+        -webkit-text-stroke: 0.1px cyan; }
+        p { font-size: 14px; margin-top: 5px; max-width: 80%; }
+
+        /* Profile Image */
+        .image-container {
+            position: relative;
+            z-index: 2;
+            display: inline-block;
+            margin-top: 25px;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(200px);
+            border-radius: 50%;
+        }
+        .image-container::before,
+        .image-container::after {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: -3px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid transparent;
+            border-width: 5px;
+            animation: rotateBorder 3s linear infinite;
+        }
+        
+        .image-container::before {
+            border-top: 5px solid rgb(238, 10, 10);
+            border-bottom: 5px solid cyan;
+
+        }
+
+
+        @keyframes rotateBorder {
+            
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .profile-img {
+            border: 3px solid rgba(255, 255, 255, 0.1);
+            width: 150px;
+            height: 150px;
+            margin-top: 5px;
+            border-radius: 50%;
+            box-shadow: 0 0 30px cyan;
+        }
+
+        /* Background Animation */
+        css-doodle {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 0;
+        }
+        
+
+        /* Social Media Icons */
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .social-links img {
+            width: 30px;
+            transition: transform 0.3s;
+        }
+
+        .social-links img:hover {
+            transform: scale(1.2);
+        }
+
+        /* Read Me Button */
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: cyan;
+            color: black;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .btn:hover{
+            box-shadow:20px 20px 30px cyan;
+        }
+    </style>
+</head>
+<body>
+    <css-doodle>
+        <style>
+            --color: #51eaea, #fffde1, #ff9d76, #FB3569;
+            @grid: 30x1 / 100vw 100vh / #270f34;
+
+            :container {
+                perspective: 30vmin;
+                --deg: @p(-180deg, 180deg);
+            }
+
+            :after,
+            :before {
+                content: '';
+                background: @p(--color);
+                @place: @r(100%) @r(100%);
+                @size: @r(6px);
+                @shape: heart;
+            }
+
+            @place: center;
+            @size: 18vmin;
+            box-shadow: @m2(0 0 50px @p(--color));
+            background: @m100(radial-gradient(@p(--color) 50%, transparent 0) @r(-20%, 120%) @r(-20%, 100%) / 1px 1px no-repeat);
+            animation: scale-up 12s linear infinite;
+            animation-delay: calc(-12s / @I * @i);
+
+            @keyframes scale-up {
+                0%, 95.01%, 100% {
+                    transform: translateZ(0) rotate(0);
+                    opacity: 0;
+                }
+                10% { opacity: 1; }
+                95% { transform: translateZ(35vmin) rotateZ(var(--deg)); }
+            }
+        </style>
+    </css-doodle>
+
+    <header>
+        <nav>
+            <ul>
+                <li><img class="logo" src="https://i.imgur.com/ibTresR.jpeg" alt="Logo"></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="https://darshan-m-sys.github.io/New--website/Auobt us.html " target="_blank">About</a></li>
+                <li><a href="https://darshan-m-sys.github.io/New--website/company.html">Company</a></li>
+                <li><a href="https://darshan-m-sys.github.io/New--website/contact.html ">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="image-container">
+        <img class="profile-img" src="C:\Users\darsh_v1m5wdi\Downloads\me-removebg-preview.png" alt="Darshan">
+    </div>
+
+    <section class="hero">
+        <h3>Hi, Myself</h3>
+        <h1><span>Darshan M</span></h1>
+        <h2> I'm a <span class="typing"></span></h2>
+        <p>"Unlock your potential—learn, grow, and master new skills with us!"</p>
+        
+    <!-- Social Media Links -->
+    <div class="social-links">
+        <a href="https://www.facebook.com/people/Darshan-Darshan/pfbid02HwYWd67R9bm31Kry8y831up7zEXw3YCXCBG4gNVjEuAF44uj5mhkwUogBwkHeRAdl/?rdid=NnQ1U7Zo9SBPv1lS&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F14txmWrMFW%2F"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384053.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/coder.142?igsh=MWY4cXljY3hqcWU5Yw=="><img src="https://cdn-icons-png.flaticon.com/512/3955/3955024.png" alt="Instagram"></a>
+        <a href="https://www.linkedin.com/in/darshan-m-coder/"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384014.png" alt="LinkedIn"></a>
+        <a href="https://github.com/Darshan-M-sys/New--website"><img  class="git"src="https://cdn-icons-png.flaticon.com/512/733/733609.png" alt="LinkedIn"></a>
+    </div>
+
+    <a href="https://darshan-m-sys.github.io/New--website/login.html" class="btn">Login To Learn Python Code</a>
+    
+    <a href="https://darshan-m-sys.github.io/New--websit" class="btn">How To Use Website</a>
+</section>
+
+<script>
+    const words = ["Frontend Developer", "Web Designer", "Web Developer"];
+    let i = 0;
+    let j = 0;
+    let currentWord = "";
+    let isDeleting = false;
+    const typingElement = document.querySelector(".typing");
+
+    function typeEffect() {
+        currentWord = words[i];
+        if (isDeleting) {
+            typingElement.textContent = currentWord.substring(0, j--);
+            if (j < 0) {
+                isDeleting = false;
+                i = (i + 1) % words.length;
+            }
+        } else {
+            typingElement.textContent = currentWord.substring(0, j++);
+            if (j === currentWord.length + 1) {
+                isDeleting = true;
+                setTimeout(typeEffect, 1000);
+                return;
+            }
+        }
+        setTimeout(typeEffect, isDeleting ? 50 : 100);
+    }
+
+    document.addEventListener("DOMContentLoaded", typeEffect);
+</script>
+    </section>
+
+    <script src="https://unpkg.com/css-doodle@0.34.0/css-doodle.min.js"></script>
+</body>
+</html>
