@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Nandini</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #f9c5d1;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .letter {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 60%;
+            margin: auto;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: left;
+            display:None;
+            animation: fadeIn 1s ease-in-out;
+        }
+        h1 {
+            color: #ff4081;
+            font-size: 3em;
+        }
+        p {
+            font-size: 1.2em;
+            color: #333;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .button {
+            padding: 15px 25px;
+            font-size: 1.2em;
+            color: white;
+            background-color: #ff4081;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #d81b60;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Birthday Nandini! 🎉</h1>
+        <button class="button" onclick="openLetter()">Open Your Birthday Letter 💌</button>
+        <div class="letter" id="birthdayLetter">
+            <p><b>Dear Nandini,</b></p>
+            <p>On this special day, I just want to remind you how amazing you are. Your kindness, your laughter, and your friendship mean the world to me. May your birthday be filled with love, happiness, and all the beautiful things you deserve.</p>
+            <p>Wishing you endless joy and success in everything you do. Have a fantastic birthday! 🎂🎈</p>
+            <p>With lots of love,</p>
+            <p>Your Friend Darshan M</p>
+        </div>
+    </div>
+
+    <script>
+        function openLetter() {
+            document.getElementById("birthdayLetter").style.display = "block";
+        }
+    </script>
+</body>
+</html>
