@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation with Floating Labels</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            width: 350px;
+        }
+
+        /* Input field container */
+        .input-container {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        /* Input fields */
+        .input-container input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid gray;
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+            background: transparent;
+        }
+
+        /* Floating Labels */
+        .input-container label {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            font-size: 16px;
+            color: gray;
+            transition: 0.3s ease-in-out;
+            background: white;
+            padding: 0 5px;
+            pointer-events: none;
+        }
+
+        /* Move label when input is focused */
+        .input-container input:focus + label,
+        .input-container input:not(:placeholder-shown) + label {
+            top: -10px;
+            font-size: 14px;
+            color: blue;
+        }
+
+        /* Gender Selection */
+        .gender-container {
+            margin-bottom: 20px;
+        }
+
+        /* Button Styles */
+        button {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: darkblue;
+        }
+
+        /* Error Message */
+        #error-message {
+            color: red;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="myForm">
+        <div class="input-container">
+            <input type="text" id="name" placeholder=" " required>
+            <label for="name">Enter Your Name</label>
+        </div>
+
+        <div class="input-container">
+            <input type="email" id="email" placeholder=" " required>
+            <label for="email">Enter Your Email</label>
+        </div>
+
+        <div class="input-container">
+            <input type="password" id="password" placeholder=" " required>
+            <label for="password">Enter Your Password</label>
+        </div>
+
+        <div class="input-container">
+            <input type="number" id="age" placeholder=" " required>
+            <label for="age">Enter Your Age</label>
+        </div>
+
+        <div class="input-container">
+            <input type="date" id="date" required>
+        </div>
+
+        <div class="gender-container">
+            <input type="radio" name="gender" id="male" value="male"> Male
+            <input type="radio" name="gender" id="female" value="female"> Female
+        </div>
+
+        <button type="button" onclick="togglePassword()">Show/Hide Password</button><br><br>
+        <button type="submit">Submit</button>
+
+        <div id="error-message"></div>
+    </form>
+
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let password = document.getElementById("password").value.trim();
+            let age = parseInt(document.getElementById("age").value);
+            let date = document.getElementById("date").value;
+            let genderMale = document.getElementById("male").checked;
+            let genderFemale = document.getElementById("female").checked;
+            let errorMessage = document.getElementById("error-message");
+
+            // Validation checks
+            if (name === "") {
+                errorMessage.textContent = "Please enter your name.";
+                return;
+            }
+
+            if (email === "" || !email.includes("@") || !email.includes(".")) {
+                errorMessage.textContent = "Please enter a valid email.";
+                return;
+            }
+
+            if (password === "" || password.length < 6) {
+                errorMessage.textContent = "Password must be at least 6 characters.";
+                return;
+            }
+
+            if (isNaN(age) || age < 18) {
+                errorMessage.textContent = "Age must be 18 or above.";
+                return;
+            }
+
+            if (date === "") {
+                errorMessage.textContent = "Please select a date.";
+                return;
+            }
+
+            if (!genderMale && !genderFemale) {
+                errorMessage.textContent = "Please select a gender.";
+                return;
+            }
+
+            // Success message
+            errorMessage.textContent = "You have successfully logged in!";
+            errorMessage.style.color = "green";
+
+            // Redirect after 2 seconds
+            setTimeout(function() {
+                window.location.href = "PythonLearnToolCode.html"; // Change this to your destination page
+            }, 2000);
+        });
+
+        function togglePassword() {
+            let passwordField = document.getElementById("password");
+            passwordField.type = (passwordField.type === "password") ? "text" : "password";
+        }
+    </script>
+
+</body>
+</html>
