@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Happy Birthday</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@400;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      background: radial-gradient(circle at top, #1e1f26, #16171b);
+      font-family: 'Quicksand', sans-serif;
+      overflow-x: auto; /* Enable horizontal scroll */
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, #ff0080, #7928ca);
+      opacity: 0.1;
+      z-index: 0;
+    }
+
+    .curtain {
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      top: 0;
+      background: linear-gradient(to bottom, #ff6a00, #ffb347);
+      z-index: 10;
+      transition: all 2s ease-in-out;
+    }
+
+    .left {
+      left: 0;
+      border-top-right-radius: 60px;
+      border-bottom-right-radius: 60px;
+    }
+
+    .right {
+      right: 0;
+      border-top-left-radius: 60px;
+      border-bottom-left-radius: 60px;
+    }
+
+    .open-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 20;
+      background: #ff4081;
+      color: #fff;
+      border: none;
+      font-size: 1.2rem;
+      padding: 15px 30px;
+      border-radius: 50px;
+      box-shadow: 0 0 15px #ff4081;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .open-btn:hover {
+      transform: translate(-50%, -50%) scale(1.05);
+      box-shadow: 0 0 25px #ff4081;
+    }
+
+    .container {
+      position: relative;
+      min-width: 100vw;
+      margin: 0 auto;
+      text-align: center;
+      padding: 50px 30px;
+      border-radius: 25px;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 20px rgba(255,255,255,0.1);
+      opacity: 0;
+      animation: fadeIn 2s ease 2s forwards, cardFlip 1.5s ease;
+      z-index: 5;
+      margin-top: 100px;
+    }
+
+    @keyframes cardFlip {
+      0% {
+        transform: rotateY(90deg);
+      }
+      100% {
+        transform: rotateY(0);
+      }
+    }
+
+    .container h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 5rem;
+      color: #ffdef3;
+      text-shadow: 0 0 20px #ff80bf;
+      margin-bottom: 15px;
+      animation: bounce 2s infinite alternate;
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-15px);
+      }
+    }
+
+    .container p {
+      font-size: 1.1rem;
+      color: #fff;
+      margin-bottom: 25px;
+      text-shadow: 0 0 10px rgba(255,255,255,0.2);
+      animation: fadeIn 2s ease 2s forwards;
+      opacity: 0;
+    }
+
+    .scroll-x {
+      overflow-x: auto;
+      white-space: nowrap;
+      padding: 10px 0;
+    }
+
+    .images {
+      display: inline-flex;
+      gap: 30px;
+      flex-wrap: nowrap;
+      animation: zoomIn 2s ease 4s forwards;
+      opacity: 0;
+    }
+
+    @keyframes zoomIn {
+      from {
+        transform: scale(0.5);
+      }
+      to {
+        transform: scale(1);
+      }
+    }
+
+    .images img {
+      width: 90px;
+      height: 90px;
+      object-fit: contain;
+      transition: transform 0.4s ease;
+      filter: drop-shadow(0 5px 10px rgba(117, 5, 5, 0.2));
+      margin: 10px;
+    }
+
+    .images img:hover {
+      transform: rotateZ(-5deg) scale(1.1);
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    .center-image {
+      position: relative;
+      margin: 30px auto;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 5px solid #fff;
+      z-index: 6;
+    }
+
+    .center-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .typing-container {
+      margin-top: 40px;
+      font-family: 'Great Vibes', cursive;
+      color: #ffcaf0;
+      text-shadow: 0 0 8px #ff80bf;
+      overflow: hidden;
+      white-space: normal;
+      width: 100%;
+      font-size: 2.5rem;
+      animation: typing 4s steps(60, end), blink 0.75s step-end infinite;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      opacity: 0;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    .extra-message {
+      margin-top: 30px;
+      color: #fbeaff;
+      font-size: 1.05rem;
+      animation: fadeIn 2s ease forwards;
+      opacity: 0;
+      white-space: nowrap;
+    }
+
+    .extra-message p {
+      margin: 10px 0;
+      text-shadow: 0 0 5px rgba(255,255,255,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="curtain left" id="leftCurtain"></div>
+  <div class="curtain right" id="rightCurtain"></div>
+
+  <button class="open-btn" onclick="openCurtain()">Open Birthday Surprise</button>
+
+  <div class="particles" id="particles"></div>
+
+  <div class="container">
+    <h1>Happy Birthday! Navya Akka</h1>
+    <p>Sending you all my joy and the best wishes for today and always. 💖✨</p>
+
+    <div class="center-image">
+      <img src="https://i.imgur.com/xKjcVUX.jpeg" alt="Person Image">
+    </div>
+
+    <!-- Horizontal scrollable image row -->
+    <div class="scroll-x">
+      <div class="images">
+        <img src="https://cdn-icons-png.flaticon.com/512/865/865021.png" alt="icon1" />
+        <img src="https://cdn-icons-png.flaticon.com/512/763/763704.png" alt="icon2" />
+        <img src="https://cdn-icons-png.flaticon.com/512/1046/1046857.png" alt="icon3" />
+        <img src="https://cdn-icons-png.flaticon.com/512/3468/3468372.png" alt="icon4" />
+        <img src="https://cdn-icons-png.flaticon.com/512/477/477406.png" alt="icon5" />
+        <img src="https://cdn-icons-png.flaticon.com/512/3163/3163484.png" alt="icon6" />
+        <!-- Add more if needed -->
+      </div>
+    </div>
+
+    <div class="typing-container" id="typingMessage"></div>
+
+    <div class="extra-message" id="extraMessage">
+      <p>On this special day, I hope all your dreams take flight and happiness follows you wherever you go. 🕊️</p>
+      <p>You deserve all the joy, laughter, and sparkle the world can offer. ✨</p>
+      <p>Have the most magical and unforgettable birthday ever! 🎂🎈</p>
+    </div>
+
+    <footer>
+      <p style="color: #fff; font-size: 0.9rem; margin-top: 20px;">Created with ❤️ by Darshan Gowda (Coder.142)</p>
+    </footer>
+  </div>
+
+  <script>
+    function openCurtain() {
+      document.getElementById('leftCurtain').style.transform = 'translateX(-100%)';
+      document.getElementById('rightCurtain').style.transform = 'translateX(100%)';
+      document.querySelector('.open-btn').style.display = 'none';
+
+      setTimeout(() => {
+        const message = `Wishing you the happiest of birthdays! 🎉🎂 You are such a wonderful person, and it’s been great getting to know you. I hope your day is filled with all the happiness you deserve and that this year brings you even more amazing moments.
+
+May your birthday be full of laughter, joy, and all the things you love most. You deserve nothing but the best, and I hope you have a year filled with new adventures and successes! 
+
+Here's to celebrating you today and always! Have an incredible day! 🌟💖`;
+
+        let i = 0;
+        const typingElement = document.getElementById('typingMessage');
+        typingElement.style.opacity = 1;
+
+        function typeMessage() {
+          if (i < message.length) {
+            typingElement.innerHTML += message.charAt(i);
+            i++;
+            setTimeout(typeMessage, 50);
+          } else {
+            setTimeout(() => {
+              document.getElementById('extraMessage').style.opacity = 1;
+            }, 500);
+          }
+        }
+
+        typeMessage();
+      }, 2000);
+    }
+
+    const particleContainer = document.getElementById('particles');
+    for (let i = 0; i < 60; i++) {
+      const p = document.createElement('div');
+      p.classList.add('particle');
+      p.style.left = `${Math.random() * 100}%`;
+      p.style.animationDuration = `${6 + Math.random() * 6}s`;
+      p.style.animationDelay = `${Math.random() * 5}s`;
+      particleContainer.appendChild(p);
+    }
+  </script>
+</body>
+</html>
